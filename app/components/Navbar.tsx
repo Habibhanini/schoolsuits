@@ -1,16 +1,22 @@
 import { IoSearch } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-import { IoMenu } from "react-icons/io5"; // Icon for sidebar toggle
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { SafeGuardAlert, SafeGuardCheck } from "../icons/SvgIcons";
-
+import { BsArrowBarRight } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import { logout } from "@/app/store/userSlice"; // Import your logout action
+import { useRouter } from "next/navigation";
 interface NavbarProps {
+  isOpen: boolean;
   toggleSidebar: () => void; // Function to toggle sidebar
 }
 
-const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
+const Navbar: React.FC<NavbarProps> = ({ toggleSidebar, isOpen }) => {
+  const dispatch = useDispatch();
+  const router = useRouter(); // For navigation after logout
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSafeguarding, setIsSafeguarding] = useState(false);
 
@@ -22,14 +28,36 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
     setIsDropdownOpen((prev) => !prev);
   };
 
+  const handleLogout = () => {
+    dispatch(logout()); // Dispatch logout action to update state
+    router.push("/auth/signin"); // Redirect to the login page after logout
+  };
+
   return (
     <div className="navbar bg-white shadow-lg px-6 flex items-center">
-      {/* Sidebar toggle button */}
+      {/* Sidebar toggle button
       <button
         onClick={toggleSidebar}
         className="p-2 mr-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-md"
       >
-        <IoMenu className="h-6 w-6" />
+        {isOpen ? (
+          <BsArrowBarLeft className="h-[24px] w-[24px] transition-transform duration-200 transform " />
+        ) : (
+          <BsArrowBarRight className="h-[24px] w-[24px] transition-transform duration-200" />
+        )}
+      </button>
+    */}
+      <button
+        onClick={toggleSidebar}
+        className="p-2 mr-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-md"
+      >
+        <div
+          className={`transition-transform duration-200 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        >
+          <BsArrowBarRight className="h-[20px] w-[20px]" />
+        </div>
       </button>
 
       <div className="navbar-start flex-grow">
@@ -102,12 +130,14 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
               >
                 Settings
               </Link>
-              <Link
-                href="#"
-                className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-              >
-                Logout
-              </Link>
+              <div onClick={handleLogout}>
+                <Link
+                  href="#" // Link to sign-in page
+                  className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+                >
+                  Logout
+                </Link>
+              </div>
             </div>
           )}
         </div>

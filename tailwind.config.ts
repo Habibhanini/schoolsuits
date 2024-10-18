@@ -15,6 +15,8 @@ const config: Config = {
         "safeguard-orange-dark": "#d36724",
         "safeguard-red": "#E33939",
         "safeguard-red-dark": "#D63939",
+        "continue-yellow": "#F1B528",
+        "continue-yellow-dark": "#D89F21",
       },
     },
   },
