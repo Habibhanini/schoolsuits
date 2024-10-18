@@ -1,16 +1,21 @@
-import Image from "next/image";
-import { useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-import { SafeGuardAlert, SafeGuardCheck } from "../icons/SvgIcons";
+import { IoMenu } from "react-icons/io5"; // Icon for sidebar toggle
+import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
-const Navbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+import { SafeGuardAlert, SafeGuardCheck } from "../icons/SvgIcons";
 
+interface NavbarProps {
+  toggleSidebar: () => void; // Function to toggle sidebar
+}
+
+const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSafeguarding, setIsSafeguarding] = useState(false);
 
   const handleClick = () => {
-    setIsSafeguarding(!isSafeguarding); // Toggle the state
+    setIsSafeguarding(!isSafeguarding);
   };
 
   const toggleDropdown = () => {
@@ -18,8 +23,16 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-white shadow-lg px-6">
-      <div className="navbar-start">
+    <div className="navbar bg-white shadow-lg px-6 flex items-center">
+      {/* Sidebar toggle button */}
+      <button
+        onClick={toggleSidebar}
+        className="p-2 mr-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-md"
+      >
+        <IoMenu className="h-6 w-6" />
+      </button>
+
+      <div className="navbar-start flex-grow">
         <div className="relative">
           <input
             type="text"
@@ -58,7 +71,6 @@ const Navbar = () => {
           )}
         </button>
 
-        {/* Vertical splitter */}
         <div className="border-l-2 border-gray-300 h-8"></div>
 
         <div className="relative">
@@ -76,7 +88,6 @@ const Navbar = () => {
             <IoIosArrowDown className="h-6 w-6 text-black" />
           </button>
 
-          {/* Dropdown menu */}
           {isDropdownOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg py-2">
               <Link

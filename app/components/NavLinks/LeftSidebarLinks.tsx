@@ -12,7 +12,11 @@ import {
   FaQIcon,
 } from "@/app/icons/SvgIcons";
 
-const LeftSideBarLinks = () => {
+interface LeftSideBarLinksProps {
+  isOpen: boolean; // Prop to determine if sidebar is open or closed
+}
+
+const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({ isOpen }) => {
   const [activeLink, setActiveLink] = useState("");
 
   const links = [
@@ -21,9 +25,10 @@ const LeftSideBarLinks = () => {
       href: "#",
       icon: (
         <DashboardIcon
-          className={`mr-[-26px] ml-[-10px] ${
-            activeLink === "Dashboard" ? "fill-white" : "fill-gray-500"
-          }`}
+          className={`
+          ${activeLink === "Dashboard" ? "fill-white" : "fill-gray-500"} 
+          ${isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"}
+        `}
         />
       ),
     },
@@ -32,9 +37,10 @@ const LeftSideBarLinks = () => {
       href: "#",
       icon: (
         <ScheduleIcon
-          className={`mr-[-26px] ml-[-10px] ${
-            activeLink === "Schedule" ? "fill-white" : "fill-gray-500"
-          }`}
+          className={`
+          ${activeLink === "Dashboard" ? "fill-white" : "fill-gray-500"} 
+          ${isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"}
+        `}
         />
       ),
     },
@@ -43,9 +49,10 @@ const LeftSideBarLinks = () => {
       href: "#",
       icon: (
         <LessonsIcon
-          className={`mr-[-26px] ml-[-10px] ${
-            activeLink === "Lessons" ? "fill-white" : "fill-gray-500"
-          }`}
+          className={`
+          ${activeLink === "Dashboard" ? "fill-white" : "fill-gray-500"} 
+          ${isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"}
+        `}
         />
       ),
     },
@@ -54,9 +61,10 @@ const LeftSideBarLinks = () => {
       href: "#",
       icon: (
         <StudentsIcon
-          className={`mr-[-26px] ml-[-10px] ${
-            activeLink === "Students" ? "fill-white" : "fill-gray-500"
-          }`}
+          className={`
+          ${activeLink === "Dashboard" ? "fill-white" : "fill-gray-500"} 
+          ${isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"}
+        `}
         />
       ),
     },
@@ -65,9 +73,10 @@ const LeftSideBarLinks = () => {
       href: "#",
       icon: (
         <ClassesIcon
-          className={`mr-[-26px] ml-[-10px] ${
-            activeLink === "Classes" ? "fill-white" : "fill-gray-500"
-          }`}
+          className={`
+          ${activeLink === "Dashboard" ? "fill-white" : "fill-gray-500"} 
+          ${isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"}
+        `}
         />
       ),
     },
@@ -76,9 +85,10 @@ const LeftSideBarLinks = () => {
       href: "#",
       icon: (
         <MessagesIcon
-          className={`mr-[-26px] ml-[-10px] ${
-            activeLink === "Messages" ? "fill-white" : "fill-gray-500"
-          }`}
+          className={`
+          ${activeLink === "Dashboard" ? "fill-white" : "fill-gray-500"} 
+          ${isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"}
+        `}
         />
       ),
     },
@@ -87,9 +97,10 @@ const LeftSideBarLinks = () => {
       href: "#",
       icon: (
         <DocumentsIcon
-          className={`mr-[-26px] ml-[-10px] ${
-            activeLink === "Documents" ? "fill-white" : "fill-gray-500"
-          }`}
+          className={`
+          ${activeLink === "Dashboard" ? "fill-white" : "fill-gray-500"} 
+          ${isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"}
+        `}
         />
       ),
     },
@@ -112,15 +123,15 @@ const LeftSideBarLinks = () => {
         onClick={() => handleClick("No class in progress")}
       >
         <ProgressIcon
-          className={`mr-[-26px] ml-[-10px] ${
-            activeLink === "No class in progress" ? "fill-white" : ""
-          }`}
+          className={`            
+            ${activeLink === "No class in progress" ? "fill-white" : ""}
+            ${isOpen ? "mr-[-26px] ml-[-10px]" : "mr-[-16px]"}`}
         />
-        No class in progress
+
+        {isOpen && <span>No class in progress </span>}
       </Link>
 
       <div className="w-full h-[1px] bg-gray-300 "></div>
-
       {links.map((link) => (
         <li key={link.name}>
           <Link
@@ -132,8 +143,13 @@ const LeftSideBarLinks = () => {
             }`}
             onClick={() => handleClick(link.name)}
           >
-            <span className="mr-2">{link.icon}</span>
-            {link.name}
+            {/* Icon */}
+            <span className={`mr-2 ${!isOpen && "mx-auto ml-[-8px]"}`}>
+              {link.icon}
+            </span>
+
+            {/* Text, hidden when collapsed */}
+            {isOpen && <span>{link.name}</span>}
           </Link>
         </li>
       ))}
@@ -151,9 +167,10 @@ const LeftSideBarLinks = () => {
         <FaQIcon
           className={`mr-[-26px] ml-[-10px] ${
             activeLink === "Help and FAQ" ? "fill-white" : "fill-[#97A3B6]"
-          }`}
+          }
+            ${isOpen ? "mr-[-26px] ml-[-10px]" : "ml-[-8px]"}`}
         />
-        Help and FAQ
+        {isOpen && <span> Help and FAQ</span>}
       </Link>
     </ul>
   );

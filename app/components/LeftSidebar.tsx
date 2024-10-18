@@ -1,41 +1,42 @@
 import Link from "next/link";
-import LeftSideBarLinks from "./NavLinks/LeftSidebarLinks"; // Ensure this path is correct
+import LeftSideBarLinks from "./NavLinks/LeftSidebarLinks";
 import Image from "next/image";
 
-// Define the props interface
 interface LeftSidebarProps {
-  isOpen: boolean; // to track whether the sidebar is open or closed
-  toggleSidebar: () => void; // function to toggle the sidebar
+  isOpen: boolean;
+  toggleSidebar: any; // to track whether the sidebar is open or closed
 }
 
+// LeftSidebar component
 const LeftSidebar: React.FC<LeftSidebarProps> = ({ isOpen, toggleSidebar }) => {
   return (
     <div
-      className={`fixed inset-y-0 left-0 w-64 bg-white mt-14 p-4 transform transition-transform duration-400 ease-in-out ${
-        isOpen ? "translate-x-0 lg:static" : "-translate-x-2/3"
+      className={`fixed inset-y-0 left-0 bg-white p-4  transition-all duration-200  ${
+        isOpen ? "w-64" : "w-20"
       }`}
-      onMouseEnter={toggleSidebar} // Open on hover
-      onMouseLeave={toggleSidebar} // Close on mouse leave
     >
-      <LeftSideBarLinks />
+      {/* Links and icons */}
+      <div className="mt-12">
+        <LeftSideBarLinks isOpen={isOpen} />
+      </div>
+      {/* Bottom images */}
       <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
         <Link href="#">
           <Image
             src="/images/LogoSchoolSuite.png"
             alt="First Image"
-            width={20}
-            height={20}
-            className="mr-4"
+            width={isOpen ? 20 : 20}
+            height={isOpen ? 20 : 20}
+            className={`translate-y-1 ${!isOpen && "ml-2"}`}
           />
         </Link>
-
         <Link href="#">
           <Image
             src="/images/SchoolSuite.png"
             alt="Second Image"
-            width={120}
-            height={60}
-            className="translate-y-1"
+            width={isOpen ? 120 : 40}
+            height={isOpen ? 60 : 40}
+            className={`translate-y-1 ${!isOpen && "hidden"}`}
           />
         </Link>
       </div>
