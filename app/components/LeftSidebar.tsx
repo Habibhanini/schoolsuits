@@ -28,15 +28,16 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({
           alt="First Image"
           width={0}
           height={0}
-          className={` ${isOpen && "mr-[60px]"} ${!isOpen && "ml-2"}`}
+          className={` ${isOpen && "mr-[20px]"} ${!isOpen && "ml-2"}`}
           style={{ width: "20px", height: "auto" }}
         />
         <Image
           src="/images/SchoolSuite.png"
           alt="Second Image"
-          width={isOpen ? 140 : 40}
-          height={isOpen ? 80 : 40}
-          className={`translate-y-1 ml-[-24px]  ${!isOpen && "hidden"}`}
+          width={140}
+          height={0}
+          className={` ml-[-20px] mt-[-5px] ${!isOpen && "hidden"}`}
+          style={{ width: "140px", height: "30px" }}
         />
       </div>
     </div>
