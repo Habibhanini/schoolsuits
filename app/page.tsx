@@ -2,7 +2,7 @@
 import { SetStateAction, useState } from "react";
 import LeftSidebar from "./components/LeftSidebar";
 import Navbar from "./components/Navbar";
-import Dashboard from "./components/dashboard/Dashoard";
+import Dashboard from "./containers/Dashoard";
 import ContentContainer from "./containers/ContentContainer";
 
 export default function Home() {

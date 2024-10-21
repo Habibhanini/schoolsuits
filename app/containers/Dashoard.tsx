@@ -1,4 +1,4 @@
-import TodoCard from "./TodoCard";
+import TodoCard from "../components/dashboard/TodoCard";
 
 const Dashboard = () => {
   return <TodoCard />;

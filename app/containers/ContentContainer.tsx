@@ -1,4 +1,4 @@
-import Dashboard from "../components/dashboard/Dashoard";
+import Dashboard from "./Dashoard";
 
 interface ContentContainerProps {
   activeContent: string;
