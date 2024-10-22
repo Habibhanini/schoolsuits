@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
+        jakarta: ["Plus Jakarta Sans", "sans-serif"],
       },
       colors: {
         background: "var(--background)",
@@ -20,6 +21,8 @@ const config: Config = {
         "safeguard-red-dark": "#D63939",
         "continue-yellow": "#F1B528",
         "continue-yellow-dark": "#D89F21",
+        "school-blue": "#3047BA",
+        "school-blue-dark": "#203488",
       },
     },
   },

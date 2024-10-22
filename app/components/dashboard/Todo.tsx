@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const TodoCard = () => {
+const Todo = () => {
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -47,18 +47,18 @@ const TodoCard = () => {
   const completedCount = tasks.filter((task) => task.completed).length;
 
   return (
-    <div className="bg-[#3047BA] text-white p-6 rounded-3xl shadow-lg w-full max-w-lg h-[400px]">
+    <div className="bg-school-blue text-white p-6 rounded-3xl shadow-lg w-full max-w-lg h-[400px]">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold font-playfair">TO-DO</h2>
 
         <div className="flex items-center space-x-4">
-          <p className="text-white font-bold">
+          <p className="text-white font-bold font-jakarta">
             Completed {completedCount}/{tasks.length}
           </p>
 
           <button
             onClick={addTask}
-            className="bg-white text-black rounded-md py-1 px-4 text-sm font-bold hover:bg-gray-200"
+            className="bg-white text-black rounded-md py-1 px-4 text-sm font-bold hover:bg-gray-200 font-jakarta"
           >
             Add a Task
           </button>
@@ -70,11 +70,11 @@ const TodoCard = () => {
         {tasks.map((task) => (
           <div
             key={task.id}
-            className="bg-[#3047BA] border-b-[1px] text-white  flex items-start justify-between"
+            className="bg-[#3047BA] border-b-[1px] text-white  flex items-start justify-between font-jakarta"
           >
             <div>
               <h3 className="font-bold mb-4">{task.title}</h3>
-              <p className="text-sm text-gray-300">
+              <p className="text-sm text-gray-300 font-jakarta">
                 Deadline: {task.deadline} - {task.professor}
               </p>
             </div>
@@ -93,4 +93,4 @@ const TodoCard = () => {
   );
 };
 
-export default TodoCard;
+export default Todo;

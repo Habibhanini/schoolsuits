@@ -109,22 +109,22 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
 
   return (
     <ul className="space-y-2">
-      <div
+      <li
         className={`flex items-center p-1 rounded-xl transition duration-200 mb-2 font-bold ${
-          activeLink === "No class in progress"
+          activeLink === "Progress"
             ? "bg-[#F1B528] text-white"
             : "text-gray-500 hover:bg-gray-300 hover:text-gray-800"
         }`}
-        onClick={() => handleClick("Progress")}
-        style={{ cursor: "pointer" }} // Add this line
+        onClick={() => handleClick("Progress")} // Update activeLink to match the label
+        style={{ cursor: "pointer" }}
       >
         <ProgressIcon
           className={`mr-[-26px] ml-[-10px] ${
-            activeLink === "No class in progress" ? "fill-white" : ""
+            activeLink === "Progress" ? "fill-white" : ""
           } ${isOpen ? "mr-[-26px] ml-[-10px]" : "mr-[-16px]"}`}
         />
-        {isOpen && <span>No class in progress</span>}
-      </div>
+        {isOpen && <span className="font-jakarta">No class in progress</span>}
+      </li>
 
       <div className="w-full h-[1px] bg-gray-300"></div>
 
@@ -142,16 +142,16 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
             <span className={`mr-2 ${!isOpen && "mx-auto ml-[-8px]"}`}>
               {link.icon(activeLink === link.name)}
             </span>
-            {isOpen && <span>{link.name}</span>}
+            {isOpen && <span className="font-jakarta">{link.name}</span>}
           </div>
         </li>
       ))}
 
       <div className="w-full h-[1px] bg-gray-300"></div>
 
-      <div
+      <li
         className={`flex items-center p-1 rounded-xl transition duration-200 mb-2 font-bold ${
-          activeLink === "Help and FAQ"
+          activeLink === "Help"
             ? "bg-[#B3C6E3] text-white"
             : "text-[#97A3B6] hover:bg-gray-300 hover:text-gray-800"
         }`}
@@ -160,11 +160,11 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
       >
         <FaQIcon
           className={`mr-[-26px] ml-[-10px] ${
-            activeLink === "Help and FAQ" ? "fill-white" : "fill-[#97A3B6]"
+            activeLink === "Help" ? "fill-white" : "fill-[#97A3B6]"
           } ${isOpen ? "mr-[-26px] ml-[-10px]" : "ml-[-8px]"}`}
         />
-        {isOpen && <span>Help and FAQ</span>}
-      </div>
+        {isOpen && <span className="font-jakarta">Help and FAQ</span>}
+      </li>
     </ul>
   );
 };
