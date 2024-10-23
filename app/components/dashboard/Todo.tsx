@@ -49,7 +49,7 @@ const Todo = () => {
   return (
     <div className="bg-school-blue text-white p-6 rounded-3xl shadow-lg w-full max-w-lg h-[400px]">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold font-playfair">TO-DO</h2>
+        <h2 className="text-xl font-bold font-playfair">To-Do</h2>
 
         <div className="flex items-center space-x-4">
           <p className="text-white font-bold font-jakarta">
@@ -66,7 +66,7 @@ const Todo = () => {
       </div>
 
       {/* Tasks List with fixed height and scrollable */}
-      <div className="space-y-4 max-h-[300px] overflow-y-auto pr-1">
+      <div className="space-y-4 max-h-[300px] overflow-y-auto scrollable pr-1">
         {tasks.map((task) => (
           <div
             key={task.id}

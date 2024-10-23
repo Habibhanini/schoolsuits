@@ -92,7 +92,7 @@ const Threads = () => {
       <div
         className={`${
           threads.length > 1
-            ? "max-h-[300px] overflow-y-auto "
+            ? "max-h-[300px] overflow-y-auto scrollable "
             : "max-h-[400px]"
         }`}
       >

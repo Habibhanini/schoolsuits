@@ -30,7 +30,7 @@ const Events: React.FC<EventsProps> = ({ events }) => {
 
   return (
     <div className="mt-6">
-      <h3 className="text-lg font-bold mb-4">Events</h3>
+      <h2 className="text-xl font-extrabold font-playfair">Events</h2>
       <div className="space-y-4">
         {events.length > 0 ? (
           events.map((event, index) => {
