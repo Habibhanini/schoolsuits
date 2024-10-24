@@ -27,22 +27,6 @@ const Messages: React.FC = () => {
       summary:
         "The email details the class placements for L2 French and Spanish for next year 8 and 9, considering student language choices, behaviour, and family ties to Spain.",
     },
-    {
-      id: 4,
-      sender: "Jen Bartley",
-      title: "Classes next year behaviour flags",
-      body: "I have done the classlists for L2 for 8s and 9s next year here, thank you for all the colours that you added, this was very helpful.",
-      summary:
-        "The email details the class placements for L2 French and Spanish for next year 8 and 9, considering student language choices, behaviour, and family ties to Spain.",
-    },
-    {
-      id: 5,
-      sender: "Jen Bartley",
-      title: "Classes next year behaviour flags",
-      body: "I have done the classlists for L2 for 8s and 9s next year here, thank you for all the colours that you added, this was very helpful.",
-      summary:
-        "The email details the class placements for L2 French and Spanish for next year 8 and 9, considering student language choices, behaviour, and family ties to Spain.",
-    },
   ];
 
   return (
