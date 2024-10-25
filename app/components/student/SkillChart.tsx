@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import * as d3 from "d3";
+import { IoEllipsisHorizontal } from "react-icons/io5";
 
 interface SkillData {
   subject: string;
@@ -118,8 +119,13 @@ const SkillChart = () => {
   }, [data]);
 
   return (
-    <div className="bg-white rounded-lg shadow p-4 h-[390px] ">
-      <h2 className="text-lg font-bold">Skills</h2>
+    <div className="bg-white rounded-3xl shadow p-4 h-[390px] ">
+      <div className="flex justify-between items-center mb-4">
+        <h2 className="text-xl font-extrabold font-playfair">Skills</h2>
+        <button>
+          <IoEllipsisHorizontal className="w-6 h-6" />
+        </button>
+      </div>
       <div className="flex items-center justify-center">
         <svg ref={svgRef}></svg>
       </div>

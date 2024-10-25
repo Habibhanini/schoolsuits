@@ -17,7 +17,7 @@ const StudentCenter = () => {
         {" "}
         <StudentNotes />
       </div>
-      <div className="col-span-4 row-span-2 row-start-3">
+      <div className="col-span-4 row-span-2 row-start-3 mt-[-6px]">
         <InternCommunications />
       </div>
     </div>

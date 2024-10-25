@@ -1,20 +1,31 @@
 import React from "react";
+import { IoEllipsisHorizontal } from "react-icons/io5";
 
 const AdditionalInfo = () => {
   return (
-    <div className="bg-white rounded-lg shadow p-4">
-      <h2 className="text-lg font-bold">Additional Information</h2>
+    <div className="bg-white rounded-3xl shadow p-4">
+      <div className="flex justify-between items-center mb-2">
+        <h2 className="text-xl font-extrabold font-playfair">
+          Additional informations
+        </h2>
+        <button>
+          <IoEllipsisHorizontal className="w-6 h-6" />
+        </button>
+      </div>
       <div className="flex flex-wrap gap-2">
-        <span className="bg-blue-100 text-blue-800 py-1 px-3 rounded-full text-sm">
+        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-sm">
           Eligible for free transport
         </span>
-        <span className="bg-blue-100 text-blue-800 py-1 px-3 rounded-full text-sm">
+        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-sm">
           Young Carer
         </span>
-        <span className="bg-blue-100 text-blue-800 py-1 px-3 rounded-full text-sm">
+        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-sm">
           Uniform Allowance
         </span>
-        <span className="bg-blue-100 text-blue-800 py-1 px-3 rounded-full text-sm">
+        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-sm">
+          School Arrange
+        </span>
+        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-sm">
           Service Children Concerns
         </span>
       </div>
