@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { IoEllipsisHorizontal } from "react-icons/io5";
 const StudentProfile = () => {
@@ -11,10 +12,12 @@ const StudentProfile = () => {
       </div>
       <div className="flex items-start space-x-4">
         {/* Profile Image */}
-        <img
+        <Image
           src="/images/avatar.png"
           alt="Jen Bartley"
           className="w-20 h-20 rounded-box object-cover"
+          width={100}
+          height={80}
         />
 
         {/* Student Details */}

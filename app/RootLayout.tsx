@@ -24,11 +24,7 @@ export default function RootLayout({
     <Provider store={store}>
       <html lang="en">
         <head>
-          <link
-            rel="icon"
-            href="/images/LogoSchoolSuite.png"
-            type="image/png"
-          />
+          <link rel="icon" href="/schoolicon.ico" type="image/x-icon" />
         </head>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}

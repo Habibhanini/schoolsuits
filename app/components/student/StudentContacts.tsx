@@ -1,6 +1,4 @@
 import React from "react";
-import AdditionalInfo from "./AdditionalInfo";
-import DietaryNeeds from "./DietaryNeeds";
 import { IoEllipsisHorizontal } from "react-icons/io5";
 
 const StudentContacts = () => {
