@@ -127,14 +127,14 @@ const SkillChart = () => {
   }, []);
 
   return (
-    <div className="bg-white rounded-3xl shadow p-4 h-[390px] ">
+    <div className="bg-white rounded-3xl  p-4 h-[390px] lg:w-[450px] 2xl:w-full   ">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-extrabold font-playfair">Skills</h2>
         <button>
           <IoEllipsisHorizontal className="w-6 h-6" />
         </button>
       </div>
-      <div className="flex items-center justify-center  h-[300px]">
+      <div className="h-[300px] w-full 2xl:flex justify-center items-center xl:ml-[-50px] xl:mt-[-50px] 2xl:ml-0 2xl:mt-0">
         <svg ref={chartRef}></svg>
       </div>
     </div>

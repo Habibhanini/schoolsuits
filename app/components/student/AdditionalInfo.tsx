@@ -3,7 +3,7 @@ import { IoEllipsisHorizontal } from "react-icons/io5";
 
 const AdditionalInfo = () => {
   return (
-    <div className="bg-white rounded-3xl shadow p-4">
+    <div className="bg-white rounded-3xl  p-4 lg:h-[350px] 2xl:h-[170px] 2xl:ml-0 lg:ml-1 ">
       <div className="flex justify-between items-center mb-2">
         <h2 className="text-xl font-extrabold font-playfair">
           Additional informations

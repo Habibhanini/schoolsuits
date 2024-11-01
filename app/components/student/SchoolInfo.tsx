@@ -3,7 +3,7 @@ import { IoEllipsisHorizontal } from "react-icons/io5";
 
 const SchoolInfo = () => {
   return (
-    <div className="bg-white rounded-3xl shadow p-4 w-[350px] h-[420px]">
+    <div className="bg-white rounded-3xl  p-4 lg:w-[345px] 2xl:w-[350px] h-[420px] ">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-extrabold font-playfair">
           School informations

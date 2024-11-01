@@ -5,7 +5,7 @@ import { IoEllipsisHorizontal, IoEllipsisVertical } from "react-icons/io5";
 const StudentFiles = () => {
   return (
     <div>
-      <div className="bg-white rounded-3xl shadow p-4 w-full max-w-[400px] h-[205px]">
+      <div className="bg-white rounded-3xl p-4  max-w-[400px] h-[205px] md:w-[350px]">
         <div className="flex justify-between items-center mb-4 ">
           <h2 className="text-xl font-extrabold font-playfair">Files</h2>
           <button>

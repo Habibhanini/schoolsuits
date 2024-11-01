@@ -4,7 +4,7 @@ import { IoEllipsisHorizontal } from "react-icons/io5";
 const StudentContacts = () => {
   return (
     <div>
-      <div className="bg-white rounded-3xl shadow p-4 h-[350px] w-[350px]">
+      <div className="bg-white rounded-3xl  p-4 h-[350px] w-[350px] ">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-extrabold font-playfair">Contacts</h2>
           <button>

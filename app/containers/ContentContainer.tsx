@@ -1,3 +1,4 @@
+import ClassInProg from "./ClassInProg";
 import Dashboard from "./Dashoard";
 import Student from "./Student";
 
@@ -11,7 +12,11 @@ const ContentContainer: React.FC<ContentContainerProps> = ({
   const renderContent = () => {
     switch (activeContent) {
       case "Progress":
-        return <div>Class In Progress</div>;
+        return (
+          <div>
+            <ClassInProg />
+          </div>
+        );
 
       case "Dashboard":
         return <Dashboard />;

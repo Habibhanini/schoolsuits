@@ -15,18 +15,17 @@ const Student = () => {
   }, []);
 
   return (
-    <div
-      className="grid grid-cols-9 grid-rows-1 gap-4"
-      style={{ height: "100vh" }}
-    >
-      <div className="col-span-3">
-        <StudentLeft />
-      </div>
-      <div className="col-span-4 col-start-4">
-        <StudentCenter />
-      </div>
-      <div className="col-span-2 col-start-8">
-        <StudentRight />
+    <div className="flex flex-col gap-4 h-screen lg:overflow-y-scroll">
+      <div className="grid grid-cols-9 grid-rows-[1fr_auto] gap-4 flex-grow">
+        <div className="col-span-3  ">
+          <StudentLeft />
+        </div>
+        <div className="2xl:col-span-4 2xl:col-start-4 lg:col-span-6">
+          <StudentCenter />
+        </div>
+        <div className="lg:col-span-9 lg:row-start-2 lg:mt-[-40px] 2xl:row-start-1 2xl:col-span-2 2xl:col-start-8 2xl:mt-0">
+          <StudentRight />
+        </div>
       </div>
     </div>
   );

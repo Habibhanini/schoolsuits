@@ -8,7 +8,7 @@ const StudentLeft = () => {
         {" "}
         <StudentProfile />
       </div>
-      <div className="row-span-2">
+      <div className="row-span-2 2xl:mr-0">
         {" "}
         <SkillChart />
       </div>

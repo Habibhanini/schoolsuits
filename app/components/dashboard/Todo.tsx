@@ -47,7 +47,7 @@ const Todo = () => {
   const completedCount = tasks.filter((task) => task.completed).length;
 
   return (
-    <div className="bg-school-blue text-white p-6 rounded-3xl shadow-lg w-full max-w-lg h-[400px]">
+    <div className="bg-school-blue text-white p-6 rounded-3xl  w-full max-w-lg h-[400px]">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold font-playfair">To-Do</h2>
 

@@ -1,9 +1,23 @@
 import Image from "next/image";
 import React from "react";
 import { IoEllipsisHorizontal } from "react-icons/io5";
+import { useState, useEffect } from "react";
 const StudentProfile = () => {
+  const [isShortScreen, setIsShortScreen] = useState(false);
+  useEffect(() => {
+    // Function to check screen height
+    const checkScreenHeight = () => {
+      setIsShortScreen(window.innerHeight <= 768);
+    };
+
+    // Initial check and event listener
+    checkScreenHeight();
+    window.addEventListener("resize", checkScreenHeight);
+
+    return () => window.removeEventListener("resize", checkScreenHeight);
+  }, []);
   return (
-    <div className="bg-white p-4 rounded-3xl shadow-md h-[420px]  ">
+    <div className="bg-white p-4 rounded-3xl h-[420px]  ">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-extrabold font-playfair">Profile</h2>
         <button>
@@ -47,10 +61,15 @@ const StudentProfile = () => {
       {/* Family Situations Section */}
       <div className="flex justify-between mt-4 space-x-2">
         {/* FAMILY SITUATIONS Section */}
-        <div className="w-1/2 h-full">
-          <h3 className="text-lg font-semibold">FAMILY SITUATIONS</h3>
-          <div className="mt-2 h-full bg-gray-100 rounded-lg ">
-            <div className="space-y-4">
+        <div className="w-1/2 h-full ">
+          <div className="relative group w-full max-w-xs">
+            <h3 className="text-lg font-semibold lg:truncate 2xl:whitespace-normal">
+              FAMILY SITUATIONS
+            </h3>
+          </div>
+
+          <div className="mt-2   bg-gray-100 rounded-lg ">
+            <div className="2xl:space-y-4 lg:space-y-2">
               <div className="pt-1 rounded-lg" />
               <div className=" border-b px-2 font-semibold border-gray-300">
                 Shared custody
@@ -64,9 +83,9 @@ const StudentProfile = () => {
         </div>
 
         {/* SEND Section */}
-        <div className="w-1/2">
+        <div className="w-1/2  ">
           <h3 className="text-lg font-semibold">SEND</h3>
-          <div className="flex space-x-2 mt-2 pr-2">
+          <div className="flex max-2xl:flex-col max-2xl:space-y-2 max-lg:flex-col max-lg:space-x-2 mt-2 pr-2">
             {/* Tags */}
             <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full">
               Dyslexic

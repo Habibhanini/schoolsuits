@@ -71,7 +71,7 @@ const Calendar = () => {
   );
 
   return (
-    <div className="bg-white p-6 rounded-3xl shadow-lg w-[460px] h-[820px]">
+    <div className="bg-white p-6 rounded-3xl  w-[460px] h-[820px]">
       {/* Month and Year Header with Arrows */}
       <div className="flex justify-between mb-4">
         <h2 className="text-xl font-extrabold font-playfair">

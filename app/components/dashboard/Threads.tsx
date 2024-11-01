@@ -77,7 +77,7 @@ const Threads = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-3xl shadow-lg h-[400px] w-full overflow-hidden">
+    <div className="bg-white p-6 rounded-3xl  h-[400px] w-full overflow-hidden">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-extrabold font-playfair">Threads</h2>
         <button

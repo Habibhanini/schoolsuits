@@ -30,7 +30,7 @@ const Messages: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white p-6 rounded-3xl shadow-lg w-full h-[405px] overflow-hidden border-gray-200">
+    <div className="bg-white p-6 rounded-3xl  w-full h-[405px] overflow-hidden border-gray-200">
       {/* Title */}
       <div className="flex justify-between items-center mb-2">
         <h2 className="text-xl font-extrabold font-playfair">Last Messages</h2>
@@ -80,7 +80,7 @@ const Messages: React.FC = () => {
                     <p className="text-sm text-orange-600 font-semibold font-jakarta mr-2">
                       Assistant’s summary
                     </p>
-                    <div className="flex-grow h-[3px] rounded-sm bg-safeguard-orange"></div>
+                    <div className="flex-grow h-[1px] rounded-sm bg-safeguard-orange"></div>
                   </div>
 
                   <div className="flex justify-between items-center mt-6">
