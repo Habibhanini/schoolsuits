@@ -44,7 +44,7 @@ const MyClass: NextPage<ClassType> = ({ className = "" }) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap items-start justify-start pt-2 gap-3 overflow-y-auto h-full scrollable">
+      <div className="flex flex-wrap items-start justify-start pt-4 p-10 gap-3 overflow-y-auto h-full scrollable pr">
         {students.map((student) => (
           <StudentCard
             key={student.number}
