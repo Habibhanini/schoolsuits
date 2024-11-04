@@ -1,0 +1,422 @@
+[
+  {
+    "studentName": "Alice",
+    "studentInitial": "A.",
+    "number": 1,
+    "initialStarCount": 3,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Bob",
+    "studentInitial": "B.",
+    "number": 2,
+    "initialStarCount": 2,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Charlie",
+    "studentInitial": "C.",
+    "number": 3,
+    "initialStarCount": 1,
+    "initialAlertCount": 2
+  },
+  {
+    "studentName": "David",
+    "studentInitial": "D.",
+    "number": 4,
+    "initialStarCount": 4,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Ella",
+    "studentInitial": "E.",
+    "number": 5,
+    "initialStarCount": 0,
+    "initialAlertCount": 3
+  },
+  {
+    "studentName": "Frank",
+    "studentInitial": "F.",
+    "number": 6,
+    "initialStarCount": 5,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Grace",
+    "studentInitial": "G.",
+    "number": 7,
+    "initialStarCount": 3,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Hank",
+    "studentInitial": "H.",
+    "number": 8,
+    "initialStarCount": 2,
+    "initialAlertCount": 2
+  },
+  {
+    "studentName": "Ivy",
+    "studentInitial": "I.",
+    "number": 9,
+    "initialStarCount": 1,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Jack",
+    "studentInitial": "J.",
+    "number": 10,
+    "initialStarCount": 4,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Kate",
+    "studentInitial": "K.",
+    "number": 11,
+    "initialStarCount": 3,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Liam",
+    "studentInitial": "L.",
+    "number": 12,
+    "initialStarCount": 2,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Mia",
+    "studentInitial": "M.",
+    "number": 13,
+    "initialStarCount": 4,
+    "initialAlertCount": 2
+  },
+  {
+    "studentName": "Noah",
+    "studentInitial": "N.",
+    "number": 14,
+    "initialStarCount": 0,
+    "initialAlertCount": 3
+  },
+  {
+    "studentName": "Olivia",
+    "studentInitial": "O.",
+    "number": 15,
+    "initialStarCount": 1,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Peter",
+    "studentInitial": "P.",
+    "number": 16,
+    "initialStarCount": 3,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Quinn",
+    "studentInitial": "Q.",
+    "number": 17,
+    "initialStarCount": 2,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Rachel",
+    "studentInitial": "R.",
+    "number": 18,
+    "initialStarCount": 1,
+    "initialAlertCount": 2
+  },
+  {
+    "studentName": "Sam",
+    "studentInitial": "S.",
+    "number": 19,
+    "initialStarCount": 4,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Tina",
+    "studentInitial": "T.",
+    "number": 20,
+    "initialStarCount": 0,
+    "initialAlertCount": 2
+  },
+  {
+    "studentName": "Uma",
+    "studentInitial": "U.",
+    "number": 21,
+    "initialStarCount": 5,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Victor",
+    "studentInitial": "V.",
+    "number": 22,
+    "initialStarCount": 3,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Wendy",
+    "studentInitial": "W.",
+    "number": 23,
+    "initialStarCount": 2,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Xander",
+    "studentInitial": "X.",
+    "number": 24,
+    "initialStarCount": 1,
+    "initialAlertCount": 2
+  },
+  {
+    "studentName": "Yara",
+    "studentInitial": "Y.",
+    "number": 25,
+    "initialStarCount": 4,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Zoe",
+    "studentInitial": "Z.",
+    "number": 26,
+    "initialStarCount": 3,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Adam",
+    "studentInitial": "A.",
+    "number": 27,
+    "initialStarCount": 0,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Bella",
+    "studentInitial": "B.",
+    "number": 28,
+    "initialStarCount": 5,
+    "initialAlertCount": 2
+  },
+  {
+    "studentName": "Carter",
+    "studentInitial": "C.",
+    "number": 29,
+    "initialStarCount": 2,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Diana",
+    "studentInitial": "D.",
+    "number": 30,
+    "initialStarCount": 1,
+    "initialAlertCount": 3
+  },
+  {
+    "studentName": "Ethan",
+    "studentInitial": "E.",
+    "number": 31,
+    "initialStarCount": 4,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Fiona",
+    "studentInitial": "F.",
+    "number": 32,
+    "initialStarCount": 3,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "George",
+    "studentInitial": "G.",
+    "number": 33,
+    "initialStarCount": 2,
+    "initialAlertCount": 2
+  },
+  {
+    "studentName": "Holly",
+    "studentInitial": "H.",
+    "number": 34,
+    "initialStarCount": 0,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Isaac",
+    "studentInitial": "I.",
+    "number": 35,
+    "initialStarCount": 5,
+    "initialAlertCount": 3
+  },
+  {
+    "studentName": "Jenna",
+    "studentInitial": "J.",
+    "number": 36,
+    "initialStarCount": 1,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Kevin",
+    "studentInitial": "K.",
+    "number": 37,
+    "initialStarCount": 4,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Lara",
+    "studentInitial": "L.",
+    "number": 38,
+    "initialStarCount": 3,
+    "initialAlertCount": 2
+  },
+  {
+    "studentName": "Mike",
+    "studentInitial": "M.",
+    "number": 39,
+    "initialStarCount": 2,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Nina",
+    "studentInitial": "N.",
+    "number": 40,
+    "initialStarCount": 0,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Oscar",
+    "studentInitial": "O.",
+    "number": 41,
+    "initialStarCount": 3,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Paula",
+    "studentInitial": "P.",
+    "number": 42,
+    "initialStarCount": 2,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Quincy",
+    "studentInitial": "Q.",
+    "number": 43,
+    "initialStarCount": 1,
+    "initialAlertCount": 2
+  },
+  {
+    "studentName": "Rita",
+    "studentInitial": "R.",
+    "number": 44,
+    "initialStarCount": 4,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Steve",
+    "studentInitial": "S.",
+    "number": 45,
+    "initialStarCount": 0,
+    "initialAlertCount": 3
+  },
+  {
+    "studentName": "Tara",
+    "studentInitial": "T.",
+    "number": 46,
+    "initialStarCount": 5,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Umar",
+    "studentInitial": "U.",
+    "number": 47,
+    "initialStarCount": 3,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Vera",
+    "studentInitial": "V.",
+    "number": 48,
+    "initialStarCount": 2,
+    "initialAlertCount": 2
+  },
+  {
+    "studentName": "Walter",
+    "studentInitial": "W.",
+    "number": 49,
+    "initialStarCount": 1,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Xena",
+    "studentInitial": "X.",
+    "number": 50,
+    "initialStarCount": 4,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Yusuf",
+    "studentInitial": "Y.",
+    "number": 51,
+    "initialStarCount": 3,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Zara",
+    "studentInitial": "Z.",
+    "number": 52,
+    "initialStarCount": 0,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Arthur",
+    "studentInitial": "A.",
+    "number": 53,
+    "initialStarCount": 5,
+    "initialAlertCount": 2
+  },
+  {
+    "studentName": "Brenda",
+    "studentInitial": "B.",
+    "number": 54,
+    "initialStarCount": 2,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Colin",
+    "studentInitial": "C.",
+    "number": 55,
+    "initialStarCount": 1,
+    "initialAlertCount": 3
+  },
+  {
+    "studentName": "Doris",
+    "studentInitial": "D.",
+    "number": 56,
+    "initialStarCount": 4,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Edward",
+    "studentInitial": "E.",
+    "number": 57,
+    "initialStarCount": 3,
+    "initialAlertCount": 0
+  },
+  {
+    "studentName": "Felicity",
+    "studentInitial": "F.",
+    "number": 58,
+    "initialStarCount": 2,
+    "initialAlertCount": 2
+  },
+  {
+    "studentName": "Garry",
+    "studentInitial": "G.",
+    "number": 59,
+    "initialStarCount": 0,
+    "initialAlertCount": 1
+  },
+  {
+    "studentName": "Hilda",
+    "studentInitial": "H.",
+    "number": 60,
+    "initialStarCount": 5,
+    "initialAlertCount": 2
+  }
+]

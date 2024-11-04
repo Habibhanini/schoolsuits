@@ -4,7 +4,7 @@ import MyClass from "../components/myclass/MyClass";
 
 const ClassInProg = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 overflow-y-scroll ">
       <ActualClass />
       <div className="flex flex-row gap-4 ">
         <div className="grid grid-cols-5 grid-rows-5 gap-4 w-full">

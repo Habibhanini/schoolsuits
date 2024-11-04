@@ -59,7 +59,7 @@ const Interaction: NextPage<RootType> = ({ className = "" }) => {
           </button>
         </div>
       </section>
-      <section className="w-full rounded-xl bg-white flex flex-col items-start justify-start p-[15px] box-border gap-2.5 min-w-[235px] max-w-[342px] text-left text-lg text-black font-playfair-display">
+      <section className="w-full rounded-xl bg-white flex flex-col items-start justify-start p-[15px] box-border gap-2.5 min-w-[235px] max-w-[342px] h-grow text-left text-lg text-black font-playfair-display">
         <div className="self-stretch overflow-hidden flex flex-row items-center justify-between flex-wrap content-center gap-5">
           <h3 className="m-0 w-[95px] relative text-inherit font-extrabold font-playfair  inline-block shrink-0">
             Timeline

@@ -1,17 +1,18 @@
 import type { NextPage } from "next";
-import Image from "next/image";
 import { IoEllipsisHorizontal } from "react-icons/io5";
-import VignetteStudent from "./VignetteStudent";
+import StudentCard from "./StudentCard";
 
 export type ClassType = {
   className?: string;
 };
-
+import students from "../../database/student.json";
 const MyClass: NextPage<ClassType> = ({ className = "" }) => {
   return (
-    <div className={`rounded-xl bg-white p-6 max-w-full h-full ${className}`}>
+    <div
+      className={`rounded-xl bg-white p-6 max-w-full overflow-hidden  h-[665px] ${className}`}
+    >
       <div
-        className={`max-w-full overflow-hidden flex flex-row items-start justify-between flex-wrap content-start py-0 pl-0 pr-[3px] box-border leading-[normal] tracking-[normal] gap-5 text-left text-lg text-black font-playfair-display ${className}`}
+        className={`max-w-full  flex flex-row items-start justify-between flex-wrap content-start py-0 pl-0 pr-[3px] box-border leading-[normal] tracking-[normal] gap-5 text-left text-lg text-black font-playfair-display ${className}`}
       >
         <a className="[text-decoration:none] w-[95px] relative font-extrabold text-[inherit] font-playfair inline-block shrink-0">
           My class
@@ -23,7 +24,7 @@ const MyClass: NextPage<ClassType> = ({ className = "" }) => {
                 Nb of students
               </a>
               <b className="relative inline-block text-black min-w-[18px]">
-                40
+                {students.length}
               </b>
             </div>
             <div className="w-[99px] flex flex-row items-start justify-start gap-[5px] flex-nowrap">
@@ -31,7 +32,10 @@ const MyClass: NextPage<ClassType> = ({ className = "" }) => {
                 Nb of absence
               </a>
               <a className="[text-decoration:none] relative font-bold text-black">
-                0
+                {students.reduce(
+                  (acc, student) => acc + student.initialAlertCount,
+                  0
+                )}
               </a>
             </div>
             <div className="flex flex-col items-start justify-start pt-[5px] px-0 pb-0">
@@ -40,8 +44,17 @@ const MyClass: NextPage<ClassType> = ({ className = "" }) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-start justify-start pt-2">
-        <VignetteStudent />
+      <div className="flex flex-wrap items-start justify-start pt-2 gap-3 overflow-y-auto h-full scrollable">
+        {students.map((student) => (
+          <StudentCard
+            key={student.number}
+            studentName={student.studentName}
+            studentInitial={student.studentInitial}
+            number={student.number}
+            initialStarCount={student.initialStarCount}
+            initialAlertCount={student.initialAlertCount}
+          />
+        ))}
       </div>
     </div>
   );
