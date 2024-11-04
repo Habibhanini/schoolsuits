@@ -1,7 +1,7 @@
 "use client";
 import { SetStateAction, useState } from "react";
-import LeftSidebar from "./components/LeftSidebar";
-import Navbar from "./components/Navbar";
+import LeftSidebar from "./components/common/LeftSidebar";
+import Navbar from "./components/common/Navbar";
 import ContentContainer from "./containers/ContentContainer";
 
 export default function Home() {

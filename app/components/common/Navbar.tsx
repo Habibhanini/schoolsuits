@@ -3,7 +3,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
-import { SafeGuardAlert, SafeGuardCheck } from "../icons/SvgIcons";
+import { SafeGuardAlert, SafeGuardCheck } from "../../icons/SvgIcons";
 import { BsArrowBarRight } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { logout } from "@/app/store/userSlice"; // Import your logout action

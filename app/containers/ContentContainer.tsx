@@ -1,6 +1,7 @@
 import ClassInProg from "./ClassInProg";
 import Dashboard from "./Dashoard";
 import Student from "./Student";
+import Users from "./Users";
 
 interface ContentContainerProps {
   activeContent: string;
@@ -31,7 +32,7 @@ const ContentContainer: React.FC<ContentContainerProps> = ({
         return <Student />;
 
       case "Classes":
-        return <div>Classes In Progress</div>;
+        return <Users />;
 
       case "Messages":
         return <div>Messages In Progress</div>;

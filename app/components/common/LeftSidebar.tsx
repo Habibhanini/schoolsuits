@@ -1,4 +1,4 @@
-import LeftSideBarLinks from "./NavLinks/LeftSidebarLinks";
+import LeftSideBarLinks from "../NavLinks/LeftSidebarLinks";
 import Image from "next/image";
 
 interface LeftSidebarProps {
