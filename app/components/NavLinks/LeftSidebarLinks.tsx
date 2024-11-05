@@ -67,6 +67,17 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
       ),
     },
     {
+      name: "Users",
+
+      icon: (isActive: boolean) => (
+        <StudentsIcon
+          className={`${isActive ? "fill-white" : "fill-gray-500"} ${
+            isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"
+          }`}
+        />
+      ),
+    },
+    {
       name: "Classes",
 
       icon: (isActive: boolean) => (

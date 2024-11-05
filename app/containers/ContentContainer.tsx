@@ -32,6 +32,9 @@ const ContentContainer: React.FC<ContentContainerProps> = ({
         return <Student />;
 
       case "Classes":
+        return <div>Classes In Progress</div>;
+
+      case "Users":
         return <Users />;
 
       case "Messages":

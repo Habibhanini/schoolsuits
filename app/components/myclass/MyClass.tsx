@@ -9,7 +9,7 @@ import students from "../../database/student.json";
 const MyClass: NextPage<ClassType> = ({ className = "" }) => {
   return (
     <div
-      className={`rounded-xl bg-white p-6 max-w-full overflow-hidden  h-[665px] ${className}`}
+      className={`rounded-xl bg-white p-6 max-w-full   h-[665px] ${className}`}
     >
       <div
         className={`max-w-full  flex flex-row items-start justify-between flex-wrap content-start py-0 pl-0 pr-[3px] box-border leading-[normal] tracking-[normal] gap-5 text-left text-lg text-black font-playfair-display ${className}`}
@@ -44,7 +44,7 @@ const MyClass: NextPage<ClassType> = ({ className = "" }) => {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap items-start justify-start pt-4 p-10 gap-3 overflow-y-auto h-full scrollable pr">
+      <div className="flex flex-wrap items-start justify-start pt-4  gap-[10px] pb-4 overflow-y-auto h-full scrollable ">
         {students.map((student) => (
           <StudentCard
             key={student.number}
