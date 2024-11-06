@@ -1,3 +1,4 @@
+import Calendar from "./Calendar";
 import ClassInProg from "./ClassInProg";
 import Dashboard from "./Dashoard";
 import Student from "./Student";
@@ -23,7 +24,11 @@ const ContentContainer: React.FC<ContentContainerProps> = ({
         return <Dashboard />;
 
       case "Schedule":
-        return <div>Schedule In Progress</div>;
+        return (
+          <div>
+            <Calendar />
+          </div>
+        );
 
       case "Lessons":
         return <div>Lessons In Progress</div>;
