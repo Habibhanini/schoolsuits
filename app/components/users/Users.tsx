@@ -1,5 +1,4 @@
-import Image from "next/image";
-import React, { useCallback } from "react";
+import React from "react";
 import { HiEllipsisHorizontal } from "react-icons/hi2";
 import { FiPlus } from "react-icons/fi";
 export type RootType = {
@@ -51,9 +50,9 @@ const UsersTable = ({ className = "" }) => {
         </div>
 
         <div className="bg-white  border-b border-gray-200 max-h-[674px] overflow-y-auto scrollable ">
-          {[...Array(15)].map((_, index) => (
+          {[...Array(15)].map(() => (
             <div
-              className={`border-gainsboro-100 border-b-[1px] border-solid box-border max-w-full  flex flex-row items-start justify-start pt-[7.5px] px-2.5 pb-1.5 gap-2.5 leading-[normal] tracking-[normal] text-center text-smi text-black font-plus-jakarta-sans mq1225:flex-wrap ${className}`}
+              className={`border-gainsboro-100 border-b-[1px] border-solid box-border max-w-full  flex flex-row items-start justify-start pt-[7.5px] px-2.5 pb-1.5 gap-2.5 leading-[normal] tracking-[normal] text-center text-smi text-black font-plus-jakarta-sans mq1225:flex-wrap`}
             >
               <div className="h-[50px] w-[50px] relative rounded-full bg-[#3971ff]  shrink-0" />
               <div className="flex-1 flex flex-col items-start justify-start pt-[7.5px] px-0 pb-0 box-border min-w-[929px] max-w-full mq1050:min-w-full">

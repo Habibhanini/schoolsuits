@@ -3,7 +3,7 @@ import React from "react";
 import { IoEllipsisHorizontal } from "react-icons/io5";
 import { useState, useEffect } from "react";
 const StudentProfile = () => {
-  const [isShortScreen, setIsShortScreen] = useState(false);
+  const [, setIsShortScreen] = useState(false);
   useEffect(() => {
     // Function to check screen height
     const checkScreenHeight = () => {

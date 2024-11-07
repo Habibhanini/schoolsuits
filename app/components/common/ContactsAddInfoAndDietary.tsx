@@ -1,16 +1,14 @@
 import type { NextPage } from "next";
-import Image from "next/image";
-import Salutations from "../Salutations";
 
 export type ContactsAddInfoAndDietaryType = {
   className?: string;
 };
 
-const ContactsAddInfoAndDietary: NextPage<ContactsAddInfoAndDietaryType> = ({
-  className = "",
-}) => {
+const ContactsAddInfoAndDietary: NextPage<
+  ContactsAddInfoAndDietaryType
+> = ({}) => {
   return (
-    <div
+    /*  <div
       className={`h-[830px] w-80 rounded-xl overflow-hidden shrink-0 flex flex-col items-start justify-start gap-5 text-left text-lg text-black font-playfair-display ${className}`}
     >
       <div className="self-stretch rounded-xl bg-white overflow-hidden flex flex-col items-start justify-start py-[15px] px-[11px] gap-5 text-mini font-plus-jakarta-sans">
@@ -128,7 +126,8 @@ const ContactsAddInfoAndDietary: NextPage<ContactsAddInfoAndDietaryType> = ({
           </div>
         </div>
       </div>
-    </div>
+    </div>*/
+    <div />
   );
 };
 
