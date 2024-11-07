@@ -1,0 +1,75 @@
+/* Calendar container styling */
+.calendar-container {
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom toolbar styling */
+.custom-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.toolbar-button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #333;
+}
+
+.toolbar-label {
+  font-size: 1.2em;
+}
+
+/* Styling for time headers (day labels) */
+.rbc-time-header-cell {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Hour slot styling */
+.rbc-day-slot .rbc-time-slot {
+  border-top: 1px solid #eee;
+}
+
+.rbc-timeslot-group {
+  border-bottom: 1px solid #eee;
+}
+
+/* Custom event styling */
+.custom-event {
+  padding: 5px;
+  font-size: 0.9em;
+  border-radius: 4px;
+  color: #333;
+}
+
+.custom-event .event-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.custom-event .event-location {
+  background-color: #333;
+  color: #fff;
+  padding: 0 5px;
+  border-radius: 4px;
+  font-size: 0.8em;
+}
+
+.custom-event .event-time {
+  font-size: 0.8em;
+  color: gray;
+}
