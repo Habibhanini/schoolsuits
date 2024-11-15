@@ -86,6 +86,12 @@ const config: Config = {
       khaki: "#c9e990",
       olivedrab: "#699c0b",
     },
+    screens: {
+      "2k": "2400px",
+      "1k": "2000px",
+      fhd: "1800px",
+      hd: "1280px",
+    },
   },
   borderRadius: {
     xl: "20px",
@@ -94,17 +100,7 @@ const config: Config = {
     "7xl-5": "26.5px",
     "81xl": "100px",
   },
-  screens: {
-    mq1050: {
-      raw: "screen and (max-width: 1050px)",
-    },
-    mq750: {
-      raw: "screen and (max-width: 750px)",
-    },
-    mq450: {
-      raw: "screen and (max-width: 450px)",
-    },
-  },
+
   plugins: [require("daisyui")],
   daisyui: {
     themes: ["light"], // Set to 'light' theme

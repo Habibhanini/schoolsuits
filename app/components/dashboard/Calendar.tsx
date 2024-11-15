@@ -71,10 +71,10 @@ const Calendar = () => {
   );
 
   return (
-    <div className="bg-white p-6 rounded-3xl  w-[460px] h-[820px]">
+    <div className="bg-white p-6 rounded-3xl  w-[400px] fhd:h-[820px] 1k:h-[986px] 2k:h-[1350px]">
       {/* Month and Year Header with Arrows */}
       <div className="flex justify-between mb-4">
-        <h2 className="text-xl font-extrabold font-playfair">
+        <h2 className="text-lg font-extrabold font-playfair">
           {currentDate.format("MMMM YYYY")}
         </h2>
         <div className="flex space-x-1">
@@ -99,7 +99,7 @@ const Calendar = () => {
           <div
             key={index}
             onClick={() => handleDayClick(day)} // Handle click for both day and label
-            className={`cursor-pointer text-center p-1 rounded-lg 
+            className={`cursor-pointer text-center  rounded-lg 
               ${
                 day.isSame(today, "day")
                   ? "border-2 border-continue-yellow" // Border around the current date (today)
@@ -113,10 +113,10 @@ const Calendar = () => {
               ${index >= 5 ? "text-gray-500" : ""}
               hover:bg-yellow-400 hover:text-white`}
           >
-            <div className="text-sm font-jakarta mb-2">
+            <div className="text-[13px] font-jakarta mb-2">
               {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][index]}
             </div>
-            <div className="h-6 w-6 flex items-center justify-center rounded-full font-bold ml-1">
+            <div className="h-6 w-6 flex items-center justify-center text-[13px] rounded-full font-bold ml-1">
               {day.date()}
             </div>
           </div>

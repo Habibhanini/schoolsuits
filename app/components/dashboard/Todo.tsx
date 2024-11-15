@@ -47,18 +47,18 @@ const Todo = () => {
   const completedCount = tasks.filter((task) => task.completed).length;
 
   return (
-    <div className="bg-school-blue text-white p-6 rounded-3xl  w-full max-w-lg h-[400px]">
+    <div className="bg-school-blue text-white p-6 rounded-3xl  w-[820px] fhd:h-[360px] 1k:h-[450px] 1k:w-[980px] ">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold font-playfair">To-Do</h2>
+        <h2 className="text-lg font-bold font-playfair">To-Do</h2>
 
         <div className="flex items-center space-x-4">
-          <p className="text-white font-bold font-jakarta">
+          <p className="text-white font-bold text-sm font-jakarta">
             Completed {completedCount}/{tasks.length}
           </p>
 
           <button
             onClick={addTask}
-            className="bg-white text-black rounded-md py-1 px-4 text-sm font-bold hover:bg-gray-200 font-jakarta"
+            className="bg-white text-black  rounded-md py-1 px-4 text-sm font-bold hover:bg-gray-200 font-jakarta"
           >
             Add a Task
           </button>
@@ -73,7 +73,7 @@ const Todo = () => {
             className="bg-[#3047BA] border-b-[1px] text-white  flex items-start justify-between font-jakarta"
           >
             <div>
-              <h3 className="font-bold mb-4">{task.title}</h3>
+              <h3 className="font-bold mb-3 text-mini">{task.title}</h3>
               <p className="text-sm text-gray-300 font-jakarta">
                 Deadline: {task.deadline} - {task.professor}
               </p>

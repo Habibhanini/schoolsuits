@@ -127,7 +127,7 @@ const SkillChart = () => {
   }, []);
 
   return (
-    <div className="bg-white rounded-3xl  p-4 h-[390px] lg:w-[450px] 2xl:w-full   ">
+    <div className="bg-white rounded-3xl  p-4 h-[390px] hd:w-[450px] fhd:w-full   ">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-extrabold font-playfair">Skills</h2>
         <button>

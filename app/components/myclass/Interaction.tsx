@@ -30,7 +30,7 @@ const Interaction: NextPage<RootType> = ({ className = "" }) => {
             className="btn flex rounded-xl text-md items-center transition-colors duration-300 bg-gray-300 text-black hover:bg-gray-400 w-[150px] h-[50px]"
           >
             <UnionLeftIcon className="mt-1 h-5 w-5" />
-            Safeguarding
+            Prev. Slide
           </button>
           <button
             onClick={() => {}}

@@ -20,10 +20,10 @@ const Student = () => {
         <div className="col-span-3  ">
           <StudentLeft />
         </div>
-        <div className="2xl:col-span-4 2xl:col-start-4 lg:col-span-6">
+        <div className="fhd:col-span-4 fhd:col-start-4 hd:col-span-6">
           <StudentCenter />
         </div>
-        <div className="lg:col-span-9 lg:row-start-2 lg:mt-[-40px] 2xl:row-start-1 2xl:col-span-2 2xl:col-start-8 2xl:mt-0">
+        <div className="lg:col-span-9 lg:row-start-2 hd:mt-[-40px] fhd:row-start-1 fhd:col-span-2 fhd:col-start-8 fhd:mt-0">
           <StudentRight />
         </div>
       </div>

@@ -6,10 +6,10 @@ export type RootType = {
 };
 const UsersTable = ({ className = "" }) => {
   return (
-    <div className="p-2 bg-white rounded-xl 2xl:w-full lg:w-[1080px] 2xl:h-full lg:h-[690px] ">
+    <div className="p-2 bg-white rounded-xl 2xl:w-full lg:w-[1080px] fhd:h-full 2k:h-[1350px] ">
       <div className="w-full mx-auto">
         <div className="flex justify-between items-center  p-4 pb-6">
-          <h1 className="text-2xl font-bold font-playfair">Users</h1>
+          <h1 className="text-lg font-bold font-playfair">Users</h1>
           <div
             className={`rounded-xl bg-[#c9e990]  flex flex-row items-start justify-start py-[7px] pl-2.5 pr-[9px] gap-2.5 leading-[normal] tracking-[normal] text-right text-smi text-olivedrab font-plus-jakarta-sans ${className}`}
           >
@@ -24,7 +24,7 @@ const UsersTable = ({ className = "" }) => {
 
         <div className="flex space-x-5 mb-4 px-2">
           <div
-            className={`max-w-full  flex flex-row items-start justify-start py-0 pl-0 pr-[1299px] box-border gap-2.5 leading-[normal] tracking-[normal] text-right text-smi text-white font-plus-jakarta-sans mq450:pr-5 mq450:box-border mq825:pr-[649px] mq825:box-border mq1500:flex-wrap ${className}`}
+            className={`max-w-full  flex flex-row items-start justify-start py-0 pl-0 pr-[1299px] box-border gap-2.5 leading-[normal] tracking-[normal] text-right text-smi text-white font-plus-jakarta-sans  ${className}`}
           >
             <div className="rounded-lg bg-[#e0e9ff] flex flex-row items-center justify-start py-2.5 pl-2.5 pr-[9px] gap-[5px]">
               <div className="rounded-md bg-[#3971ff]  flex flex-col items-start justify-start py-[5px] pl-[5px] pr-1">
@@ -49,8 +49,8 @@ const UsersTable = ({ className = "" }) => {
           </div>
         </div>
 
-        <div className="bg-white  border-b border-gray-200 max-h-[674px] overflow-y-auto scrollable ">
-          {[...Array(15)].map(() => (
+        <div className="bg-white  border-b border-gray-200 fhd:max-h-[674px] 2k:max-h-[1200px] overflow-y-auto scrollable ">
+          {[...Array(40)].map(() => (
             <div
               className={`border-gainsboro-100 border-b-[1px] border-solid box-border max-w-full  flex flex-row items-start justify-start pt-[7.5px] px-2.5 pb-1.5 gap-2.5 leading-[normal] tracking-[normal] text-center text-smi text-black font-plus-jakarta-sans mq1225:flex-wrap`}
             >

@@ -77,9 +77,9 @@ const Threads = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-3xl  h-[400px] w-full overflow-hidden">
+    <div className="bg-white p-6 rounded-3xl  fhd:h-[360px] 1k:h-[450px] w-full overflow-hidden">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-extrabold font-playfair">Threads</h2>
+        <h2 className="text-lg font-extrabold font-playfair">Threads</h2>
         <button
           onClick={() => setIsModalOpen(true)} // Open the modal
           className="bg-school-blue text-white rounded-md py-1 px-4 text-sm font-bold hover:bg-school-blue-dark"
@@ -113,22 +113,22 @@ const Threads = () => {
             {/* Thread details */}
             <div className="flex flex-col w-full">
               {/* Name */}
-              <div className="text-lg font-bold text-school-blue font-jakarta">
+              <div className="text-mini font-bold text-school-blue font-jakarta">
                 {thread.user.firstName} {thread.user.lastName}
               </div>
 
               {/* Thread title */}
-              <div className="text-lg font-bold text-gray-700 mt-1 font-jakarta">
+              <div className="text-mini font-bold text-gray-700 mt-1 font-jakarta">
                 {thread.title}
               </div>
 
               {/* Thread subtitle */}
-              <div className="text-base font-jakarta text-gray-400 mt-2">
+              <div className="text-mini font-jakarta text-gray-400 mt-2">
                 {thread.subtitle}
               </div>
 
               {/* Thread content */}
-              <div className="text-base text-gray-400 mt-1 font-jakarta">
+              <div className="text-mini text-gray-400 mt-1 font-jakarta">
                 {thread.content.split("\n").map((line, idx) => (
                   <p key={idx} className="mt-4">
                     {line}
@@ -137,7 +137,7 @@ const Threads = () => {
               </div>
 
               {/* Like button */}
-              <div className="flex items-center mt-8">
+              <div className="flex items-center mt-5">
                 <div
                   className="flex items-center space-x-2 bg-[#d8e3fe] rounded-full px-3 py-1 border border-school-blue hover:bg-gray-300 hover:cursor-pointer"
                   onClick={() => handleLike(index)} // Pass the index to handleLike
