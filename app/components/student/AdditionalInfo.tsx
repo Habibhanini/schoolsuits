@@ -5,7 +5,7 @@ const AdditionalInfo = () => {
   return (
     <div className="bg-white rounded-3xl  p-4 hd:h-[350px] fhd:h-[170px] fhd:ml-0 lg:ml-1 ">
       <div className="flex justify-between items-center mb-2">
-        <h2 className="text-xl font-extrabold font-playfair">
+        <h2 className="text-lg font-extrabold font-playfair">
           Additional informations
         </h2>
         <button>
@@ -13,19 +13,19 @@ const AdditionalInfo = () => {
         </button>
       </div>
       <div className="flex flex-wrap gap-2">
-        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-sm">
+        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-smi">
           Eligible for free transport
         </span>
-        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-sm">
+        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-smi">
           Young Carer
         </span>
-        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-sm">
+        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-smi">
           Uniform Allowance
         </span>
-        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-sm">
+        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-smi">
           School Arrange
         </span>
-        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-sm">
+        <span className="bg-blue-100 text-[#3f71fb] py-1 px-3 rounded-full font-semibold text-smi">
           Service Children Concerns
         </span>
       </div>

@@ -3,7 +3,11 @@ import { IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
-import { SafeGuardAlert, SafeGuardCheck } from "../../icons/SvgIcons";
+import {
+  NotifcationIcon,
+  SafeGuardAlert,
+  SafeGuardCheck,
+} from "../../icons/SvgIcons";
 import { BsArrowBarRight } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { logout } from "@/app/store/userSlice"; // Import your logout action
@@ -73,11 +77,8 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar, isOpen }) => {
         </div>
       </div>
 
-      <div className="flex-grow flex justify-center font-bold">
-        <span className="text-black">Notification</span>
-      </div>
-
       <div className="navbar-end flex items-center space-x-4">
+        <NotifcationIcon />
         <button
           onClick={handleClick}
           className={`btn flex rounded-xl text-lg items-center transition-colors duration-300 ${

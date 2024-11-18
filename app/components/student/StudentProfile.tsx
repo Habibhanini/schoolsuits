@@ -17,9 +17,9 @@ const StudentProfile = () => {
     return () => window.removeEventListener("resize", checkScreenHeight);
   }, []);
   return (
-    <div className="bg-white p-4 rounded-3xl h-[420px]  ">
+    <div className="bg-white p-4 rounded-3xl h-[410px]  ">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-extrabold font-playfair">Profile</h2>
+        <h2 className="text-lg font-extrabold font-playfair">Profile</h2>
         <button>
           <IoEllipsisHorizontal className="w-6 h-6" />
         </button>
@@ -36,22 +36,22 @@ const StudentProfile = () => {
 
         {/* Student Details */}
         <div>
-          <h2 className="text-xl font-bold">Jen Bartley</h2>
-          <p className="text-gray-500 font-jakarta font-semibold">
+          <h2 className="text-mini font-bold">Jen Bartley</h2>
+          <p className="text-gray-500 text-sm font-jakarta font-semibold">
             @JenBartley0132
           </p>
-          <p className="text-black font-jakarta font-bold">
+          <p className="text-black font-jakarta font-bold text-sm">
             <span>Age:</span> 16
           </p>
-          <p className="text-gray-500 font-jakarta font-semibold">
+          <p className="text-gray-500 font-jakarta font-semibold text-sm">
             People premium -{" "}
-            <span className="text-gray-900 font-jakarta font-bold">
+            <span className="text-gray-900 font-jakarta font-bold text-sm">
               Refugee
             </span>
           </p>
-          <p className="text-gray-500 font-jakarta font-semibold">
+          <p className="text-gray-500 font-jakarta font-semibold text-sm">
             Photo permission:{" "}
-            <span className="text-gray-900 font-jakarta font-bold">
+            <span className="text-gray-900 font-jakarta font-bold text-sm">
               Granted
             </span>
           </p>
@@ -62,8 +62,8 @@ const StudentProfile = () => {
       <div className="flex justify-between mt-4 space-x-2">
         {/* FAMILY SITUATIONS Section */}
         <div className="w-1/2 h-full ">
-          <div className="relative group w-full max-w-xs">
-            <h3 className="text-lg font-semibold lg:truncate 2xl:whitespace-normal">
+          <div className=" w-full max-w-xs">
+            <h3 className="text-mini font-semibold  2xl:whitespace-normal">
               FAMILY SITUATIONS
             </h3>
           </div>
@@ -71,10 +71,10 @@ const StudentProfile = () => {
           <div className="mt-2   bg-gray-100 rounded-lg ">
             <div className="2xl:space-y-4 lg:space-y-2">
               <div className="pt-1 rounded-lg" />
-              <div className=" border-b px-2 font-semibold border-gray-300">
+              <div className=" border-b px-2 font-semibold border-gray-300 text-sm">
                 Shared custody
               </div>
-              <div className="border-b px-2  font-semibold border-gray-300 ">
+              <div className="border-b px-2  font-semibold border-gray-300 text-sm ">
                 Deceased Brother
               </div>
               <div className="p-7 rounded-lg" />
@@ -84,16 +84,16 @@ const StudentProfile = () => {
 
         {/* SEND Section */}
         <div className="w-1/2  ">
-          <h3 className="text-lg font-semibold">SEND</h3>
+          <h3 className="text-mini font-semibold">SEND</h3>
           <div className="flex max-2xl:flex-col max-2xl:space-y-2 max-lg:flex-col max-lg:space-x-2 mt-2 pr-2">
             {/* Tags */}
-            <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full">
+            <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-sm">
               Dyslexic
             </span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full">
+            <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-sm">
               Dyspraxic
             </span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full">
+            <span className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-sm">
               ADHD
             </span>
           </div>
