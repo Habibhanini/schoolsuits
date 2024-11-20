@@ -89,7 +89,7 @@ const Messages: React.FC = () => {
                     </p>
 
                     {/* Interact Button positioned here */}
-                    <button className="bg-safeguard-orange text-white px-4 py-2 rounded-lg font-semibold">
+                    <button className="bg-safeguard-orange text-white px-4 py-2 text-sm rounded-lg font-semibold">
                       Interact
                     </button>
                   </div>

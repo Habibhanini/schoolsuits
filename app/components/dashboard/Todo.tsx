@@ -47,18 +47,18 @@ const Todo = () => {
   const completedCount = tasks.filter((task) => task.completed).length;
 
   return (
-    <div className="bg-school-blue text-white p-6 rounded-3xl  w-[820px] fhd:h-[360px] 1k:h-[450px] 1k:w-[980px] ">
+    <div className="bg-school-blue text-white p-4 rounded-[20px]  w-[820px] fhd:h-[360px] 1k:h-[450px] 1k:w-[980px] ">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-bold font-playfair">To-Do</h2>
 
         <div className="flex items-center space-x-4">
           <p className="text-white font-bold text-sm font-jakarta">
-            Completed {completedCount}/{tasks.length}
+            {completedCount}/{tasks.length} Completed
           </p>
 
           <button
             onClick={addTask}
-            className="bg-white text-black  rounded-md py-1 px-4 text-sm font-bold hover:bg-gray-200 font-jakarta"
+            className="bg-white text-black rounded-xl py-2 px-2 text-sm font-bold hover:bg-gray-200 font-jakarta w-24 h-10"
           >
             Add a Task
           </button>

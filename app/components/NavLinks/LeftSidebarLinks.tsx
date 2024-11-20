@@ -120,7 +120,7 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
   return (
     <ul className="space-y-2">
       <li
-        className={`flex items-center p-1 rounded-xl transition duration-200 mb-2 font-bold ${
+        className={`flex items-center p-1 rounded-xl transition duration-200 mb-2 font-bold text-sm ${
           activeLink === "Progress"
             ? "bg-[#F1B528] text-white"
             : "text-gray-500 hover:bg-gray-300 hover:text-gray-800"
@@ -141,7 +141,7 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
       {links.map((link) => (
         <li key={link.name}>
           <div
-            className={`flex items-center p-1 rounded-xl transition duration-200 mb-2 font-bold ${
+            className={`flex items-center p-1 rounded-xl transition duration-200 mb-2 font-bold  text-sm ${
               activeLink === link.name
                 ? "bg-[#F1B528] text-white"
                 : "text-gray-500 hover:bg-gray-200 hover:text-gray-800"
@@ -160,7 +160,7 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
       <div className="w-full h-[1px] bg-gray-300"></div>
 
       <li
-        className={`flex items-center p-1 rounded-xl transition duration-200 mb-2 font-bold ${
+        className={`flex items-center p-1 rounded-xl transition duration-200 mb-2 font-bold text-sm ${
           activeLink === "Help"
             ? "bg-[#B3C6E3] text-white"
             : "text-[#97A3B6] hover:bg-gray-300 hover:text-gray-800"

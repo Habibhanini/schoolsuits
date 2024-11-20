@@ -77,12 +77,12 @@ const Threads = () => {
   };
 
   return (
-    <div className="bg-white p-6 rounded-3xl  fhd:h-[360px] 1k:h-[450px] w-full overflow-hidden">
-      <div className="flex justify-between items-center mb-4">
+    <div className="bg-white p-3 rounded-3xl  fhd:h-[360px] 1k:h-[450px] w-full overflow-hidden">
+      <div className="flex justify-between items-center ">
         <h2 className="text-lg font-extrabold font-playfair">Threads</h2>
         <button
           onClick={() => setIsModalOpen(true)} // Open the modal
-          className="bg-school-blue text-white rounded-md py-1 px-4 text-sm font-bold hover:bg-school-blue-dark"
+          className="bg-school-blue text-white rounded-xl py-1 px-4 text-sm font-bold hover:bg-school-blue-dark h-10"
         >
           Write a thread
         </button>

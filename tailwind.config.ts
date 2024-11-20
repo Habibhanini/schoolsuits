@@ -105,6 +105,18 @@ const config: Config = {
       "1k": "2000px",
       fhd: "1800px",
       hd: "1400px",
+      mq1425: {
+        raw: "screen and (max-width: 1425px)",
+      },
+      lg: {
+        max: "1200px",
+      },
+      mq825: {
+        raw: "screen and (max-width: 825px)",
+      },
+      mq450: {
+        raw: "screen and (max-width: 450px)",
+      },
     },
   },
   borderRadius: {

@@ -1,9 +1,9 @@
 import AdditionalInfo from "@/app/components/student/AdditionalInfo";
 import DietaryNeeds from "@/app/components/student/DietaryNeeds";
 import StudentContacts from "@/app/components/student/StudentContacts";
-import { useEffect, useState } from "react";
+
 const StudentRight = () => {
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  /* const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,17 +20,17 @@ const StudentRight = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, []);*/
   return (
     <div className="flex flex-col gap-4">
       <div>
         <StudentContacts />
       </div>
       <div>
-        <DietaryNeeds />
+        <AdditionalInfo />
       </div>
       <div>
-        <AdditionalInfo />
+        <DietaryNeeds />
       </div>
     </div>
   );

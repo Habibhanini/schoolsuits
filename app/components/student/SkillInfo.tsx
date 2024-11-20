@@ -1,7 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import * as d3 from "d3";
+import React, { useEffect } from "react";
 import { IoEllipsisHorizontal } from "react-icons/io5";
-import Image from "next/image";
 
 const SkillInfo = () => {
   useEffect(() => {}, []);

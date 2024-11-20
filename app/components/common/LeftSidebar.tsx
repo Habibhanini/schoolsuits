@@ -34,10 +34,10 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({
         <Image
           src="/images/SchoolSuite.png"
           alt="Second Image"
-          width={140}
+          width={120}
           height={0}
           className={` ml-[-20px] mt-[-5px] ${!isOpen && "hidden"}`}
-          style={{ width: "140px", height: "30px" }}
+          style={{ width: "140px", height: "20px" }}
         />
       </div>
     </div>
