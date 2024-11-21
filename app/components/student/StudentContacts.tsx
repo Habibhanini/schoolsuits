@@ -19,19 +19,17 @@ const StudentContacts = () => {
           </li>
           <li className="flex justify-between">
             <span className="font-normal text-sm">Head of Year:</span>
-            <span className="text-[#3f71fb] text-sm font-extrabold">
-              Philip Way
-            </span>
+            <span className="text-[#3f71fb] text-sm font-bold">Philip Way</span>
           </li>
           <li className="flex justify-between">
             <span className="font-normal text-sm">Tutor:</span>
-            <span className="text-[#3f71fb] text-sm font-extrabold">
+            <span className="text-[#3f71fb] text-sm font-bold">
               Coralie Johnson
             </span>
           </li>
           <li className="flex justify-between">
             <span className="font-normal text-sm">Head of House:</span>
-            <span className="text-[#3f71fb] text-sm font-extrabold">
+            <span className="text-[#3f71fb] text-sm font-bold">
               Martha Jenkins
             </span>
           </li>
@@ -40,19 +38,19 @@ const StudentContacts = () => {
           </li>
           <li className="flex justify-between">
             <span className="font-normal text-sm">Mother:</span>
-            <span className="text-[#3f71fb] font-extrabold text-sm">
+            <span className="text-[#3f71fb] font-bold text-sm">
               Diane Garza
             </span>
           </li>
           <li className="flex justify-between">
             <span className="font-normal text-sm">Father:</span>
-            <span className="text-[#3f71fb] font-extrabold text-sm">
+            <span className="text-[#3f71fb] font-bold text-sm">
               Larry Bartley
             </span>
           </li>
           <li className="flex justify-between">
             <span className="font-normal text-sm">Sister:</span>
-            <span className="text-[#3f71fb] font-extrabold text-sm">
+            <span className="text-[#3f71fb] font-bold text-sm">
               Irene Bartley
             </span>
           </li>
