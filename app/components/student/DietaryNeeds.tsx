@@ -13,13 +13,13 @@ const DietaryNeeds = () => {
       <ul className="mt-2 h-[200px] bg-gray-100 rounded-lg space-y-4 ">
         <li />
         <div className="space-y-4 p-2">
-          <li className="flex justify-between border-b font-normal text-sm border-gray-300">
+          <li className="flex justify-between border-b font-jakarta font-semibold text-sm border-gray-300">
             <strong>Halal</strong>
           </li>
-          <li className="flex justify-between border-b font-normal text-sm border-gray-300">
+          <li className="flex justify-between border-b font-jakarta font-semibold text-sm border-gray-300">
             <strong>No dairy produce</strong>
           </li>
-          <li className="flex justify-between border-b font-normal text-sm border-gray-300">
+          <li className="flex justify-between border-b font-jakarta font-semibold text-sm border-gray-300">
             <strong>Gluten Free</strong>
           </li>
         </div>
