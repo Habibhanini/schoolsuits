@@ -68,16 +68,18 @@ const StudentProfile = () => {
             </h3>
           </div>
 
-          <div className="mt-2   bg-gray-100 rounded-lg ">
-            <div className="2xl:space-y-4 lg:space-y-2">
-              <div className="pt-1 rounded-lg" />
-              <div className=" border-b px-2 font-semibold font-jakarta border-gray-300 text-sm">
-                Shared custody
+          <div
+            className={`rounded-xl bg-whitesmoke-100 overflow-hidden flex flex-col items-start justify-start pt-0 px-[5px] pb-[105.2px] leading-[normal] tracking-[normal] text-left text-xs text-black font-jakarta `}
+          >
+            <div className="self-stretch border-gainsboro-300 border-b-[1px] border-solid overflow-hidden flex flex-row items-start justify-start py-2.5 pl-0 pr-[30px]">
+              <div className="flex-1 relative text-sm font-semibold font-jakarta">
+                Shared custory
               </div>
-              <div className="border-b px-2  font-semibold font-jakarta border-gray-300 text-sm ">
+            </div>
+            <div className="self-stretch border-gainsboro-300 border-b-[1px] border-solid overflow-hidden flex flex-row items-start justify-start py-2.5 pl-0 pr-[30px]">
+              <div className="flex-1 relative text-sm font-semibold font-jakarta">
                 Deceased Brother
               </div>
-              <div className="p-7 rounded-lg" />
             </div>
           </div>
         </div>
@@ -87,10 +89,10 @@ const StudentProfile = () => {
           <h3 className="text-mini font-jakarta font-bold">SEND</h3>
           <div className="flex max-2xl:flex-col max-2xl:space-y-2 max-lg:flex-col max-lg:space-x-2 mt-2 pr-2">
             {/* Tags */}
-            <span className="px-3 py-1 bg-gray-100 text-gray-500 font-jakarta rounded-full font-semibold text-smi">
+            <span className="px-3 py-1 bg-gray-100 text-gray-500 font-jakarta rounded-full font-semibold text-smi mr-1">
               Dyslexic
             </span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-500 font-jakarta rounded-full font-semibold text-smi">
+            <span className="px-3 py-1 bg-gray-100 text-gray-500 font-jakarta rounded-full font-semibold text-smi mr-1">
               Dyspraxic
             </span>
             <span className="px-3 py-1 bg-gray-100 text-gray-500 font-jakarta rounded-full font-semibold text-smi">

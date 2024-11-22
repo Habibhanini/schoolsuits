@@ -10,7 +10,7 @@ const DietaryNeeds = () => {
           <IoEllipsisHorizontal className="w-6 h-6" />
         </button>
       </div>
-      <ul className="mt-2 h-[200px] bg-gray-100 rounded-lg space-y-4 ">
+      <ul className="mt-2 h-[220px] bg-gray-100 rounded-xl space-y-4 ">
         <li />
         <div className="space-y-4 p-2">
           <li className="flex justify-between border-b font-jakarta font-semibold text-sm border-gray-300">
