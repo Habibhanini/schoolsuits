@@ -17,7 +17,7 @@ const StudentProfile = () => {
     return () => window.removeEventListener("resize", checkScreenHeight);
   }, []);
   return (
-    <div className="bg-white p-4 rounded-3xl h-[410px]  ">
+    <div className="bg-white rounded-3xl  p-4 h-[410px]  w-full ">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-extrabold font-playfair">Profile</h2>
         <button>
@@ -85,14 +85,14 @@ const StudentProfile = () => {
         </div>
 
         {/* SEND Section */}
-        <div className="w-1/2  ">
+        <div className="w-1/2">
           <h3 className="text-mini font-jakarta font-bold">SEND</h3>
-          <div className="flex max-2xl:flex-col max-2xl:space-y-2 max-lg:flex-col max-lg:space-x-2 mt-2 pr-2">
+          <div className="flex flex-wrap gap-2 mt-2 pr-2">
             {/* Tags */}
-            <span className="px-3 py-1 bg-gray-100 text-gray-500 font-jakarta rounded-full font-semibold text-smi mr-1">
+            <span className="px-3 py-1 bg-gray-100 text-gray-500 font-jakarta rounded-full font-semibold text-smi">
               Dyslexic
             </span>
-            <span className="px-3 py-1 bg-gray-100 text-gray-500 font-jakarta rounded-full font-semibold text-smi mr-1">
+            <span className="px-3 py-1 bg-gray-100 text-gray-500 font-jakarta rounded-full font-semibold text-smi">
               Dyspraxic
             </span>
             <span className="px-3 py-1 bg-gray-100 text-gray-500 font-jakarta rounded-full font-semibold text-smi">

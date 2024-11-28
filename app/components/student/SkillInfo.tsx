@@ -5,7 +5,7 @@ const SkillInfo = () => {
   useEffect(() => {}, []);
 
   return (
-    <div className="bg-white rounded-3xl  p-4 h-[410px] hd:w-full fhd:w-full   ">
+    <div className="bg-white rounded-3xl  p-4 h-[410px]  w-full   ">
       <div className="self-stretch overflow-hidden flex flex-row items-center justify-between gap-5">
         <a className="[text-decoration:none] relative font-extrabold font-playfair text-[inherit] inline-block min-w-[49px]">
           Skills

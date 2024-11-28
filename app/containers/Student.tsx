@@ -15,15 +15,14 @@ const Student = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-4 ">
-      <div className="flex flex-row gap-4">
-        <div className="flex flex-col gap-4 w-full">
-          <div className="flex flex-row gap-4">
-            <StudentTop />
-          </div>
-          <StudentBottom />
+    <div className="flex flex-row gap-4">
+      <div className="flex flex-col gap-4  w-4/5">
+        <div className="flex flex-row gap-4">
+          <StudentTop />
         </div>
-
+        <StudentBottom />
+      </div>
+      <div className="w-1/5">
         <StudentRight />
       </div>
     </div>
