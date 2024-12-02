@@ -27,10 +27,10 @@ const StudentRight = () => {
         <StudentContacts />
       </div>
       <div>
-        <AdditionalInfo />
+        <DietaryNeeds />
       </div>
       <div>
-        <DietaryNeeds />
+        <AdditionalInfo />
       </div>
     </div>
   );

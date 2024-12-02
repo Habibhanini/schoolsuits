@@ -5,7 +5,7 @@ const StudentContacts = () => {
   return (
     <div>
       <div className="bg-white rounded-3xl  p-4 fhd:h-[350px] hd:h-full w-full ">
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-between items-center mb-2">
           <h2 className="text-lg font-extrabold font-playfair">Contacts</h2>
           <button>
             <IoEllipsisHorizontal className="w-6 h-6" />
@@ -13,7 +13,7 @@ const StudentContacts = () => {
         </div>
         <ul className="list-none space-y-1">
           <li className="flex justify-between">
-            <span className="font-bold text-mini mb-4">
+            <span className="font-bold text-mini mb-2">
               Parents Salutations:
             </span>
           </li>
@@ -34,7 +34,7 @@ const StudentContacts = () => {
             </span>
           </li>
           <li className="flex justify-between">
-            <span className="font-bold text-mini my-4  ">Family:</span>
+            <span className="font-bold text-mini my-2  ">Family:</span>
           </li>
           <li className="flex justify-between">
             <span className="font-normal text-sm">Mother:</span>

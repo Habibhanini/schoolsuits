@@ -15,9 +15,9 @@ const Student = () => {
   }, []);
 
   return (
-    <div className="flex flex-row gap-4">
-      <div className="flex flex-col gap-4  w-4/5">
-        <div className="flex flex-row gap-4">
+    <div className="flex flex-row gap-4 max-h-screen overflow-y-auto">
+      <div className="flex flex-col gap-4 w-4/5">
+        <div className="flex flex-row gap-4 mb-2">
           <StudentTop />
         </div>
         <StudentBottom />
@@ -25,6 +25,8 @@ const Student = () => {
       <div className="w-1/5">
         <StudentRight />
       </div>
+      {/* Spacer to add extra scrollable space if needed */}
+      <div className="h-[925px] shrink-0"></div>
     </div>
   );
 };

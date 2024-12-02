@@ -105,6 +105,7 @@ const config: Config = {
       "1k": "2000px",
       fhd: "1800px",
       hd: "1400px",
+      "1366x720": { raw: "screen and (width: 1366px) and (height: 720px)" },
       mq1425: {
         raw: "screen and (max-width: 1425px)",
       },
