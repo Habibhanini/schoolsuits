@@ -5,16 +5,15 @@ import React from "react";
 
 const StudentTop = () => {
   return (
-    <div className="  h-[410px] ">
-      {/* Container for all three components in the same row with a fixed height */}
+    <div className="container mx-auto h-[400px] ">
       <div className="flex flex-row gap-4 h-full">
-        <div className="w-[520px] h-full">
+        <div className=" w-full h-full ">
           <StudentProfile />
         </div>
-        <div className="w-[320px] h-full">
+        <div className="w-full h-full">
           <SchoolInfo />
         </div>
-        <div className="w-[400px] h-full">
+        <div className="w-full h-full">
           <SkillInfo />
         </div>
       </div>

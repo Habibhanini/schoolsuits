@@ -78,6 +78,7 @@ const config: Config = {
         indianred: "#e26b6b",
         khaki: "#c9e990",
         olivedrab: "#699c0b",
+        crimson: "#ec4141",
         darkviolet: {
           "100": "#c018e2",
           "200": "rgba(192, 24, 226, 0.1)",
@@ -105,6 +106,7 @@ const config: Config = {
       "1k": "2000px",
       fhd: "1800px",
       hd: "1400px",
+      "1366x720": { raw: "screen and (width: 1366px) and (height: 720px)" },
       mq1425: {
         raw: "screen and (max-width: 1425px)",
       },

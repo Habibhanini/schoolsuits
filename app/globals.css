@@ -15,3 +15,8 @@
 .scrollable {
   scrollbar-width: none; /* Hide scrollbar */
 }
+@media (width: 1366px) and (height: 720px) {
+  .screen-1366x720\\:overflow-y-auto {
+    overflow-y: auto !important;
+  }
+}
