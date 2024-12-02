@@ -9,7 +9,7 @@ import students from "../../database/student.json";
 const MyClass: NextPage<ClassType> = ({ className = "" }) => {
   return (
     <div
-      className={`rounded-xl bg-white p-6 max-w-full   h-[665px] ${className}`}
+      className={`rounded-xl bg-white p-6 max-w-full   h-[820px] ${className}`}
     >
       <div
         className={`max-w-full  flex flex-row items-start justify-between flex-wrap content-start py-0 pl-0 pr-[3px] box-border leading-[normal] tracking-[normal] gap-5 text-left text-lg text-black font-playfair-display ${className}`}

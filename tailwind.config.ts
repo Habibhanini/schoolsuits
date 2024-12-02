@@ -78,6 +78,7 @@ const config: Config = {
         indianred: "#e26b6b",
         khaki: "#c9e990",
         olivedrab: "#699c0b",
+        crimson: "#ec4141",
         darkviolet: {
           "100": "#c018e2",
           "200": "rgba(192, 24, 226, 0.1)",
