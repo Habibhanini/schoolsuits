@@ -18,64 +18,60 @@ export default function StudentCard({
 
   return (
     <div
-      className={`rounded-3xs bg-whitesmoke-100 overflow-hidden flex flex-col items-start justify-start p-[5px] box-border gap-[5px] min-w-[140px] max-w-[200px] leading-[normal] tracking-[normal] text-center text-smi text-white font-plus-jakarta-sans `}
+      className={`w-[200px] rounded-md bg-whitesmoke-100 overflow-hidden flex flex-col items-start justify-start p-[5px] box-border gap-[5px] min-w-[140px] max-w-[200px] leading-[normal] tracking-[normal] text-left text-smi text-black font-jakarta `}
     >
-      <div className="self-stretch overflow-hidden flex flex-row items-start justify-between gap-5">
-        <div className="bg-gray-800 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs">
-          <a className="[text-decoration:none] flex-1 relative font-semibold text-[inherit]">
-            {number}
+      <div className="self-stretch overflow-hidden flex flex-row items-center justify-end py-[2.6px] px-0">
+        <IoEllipsisHorizontal className="h-5 w-5 " />
+      </div>
+      <div className="overflow-hidden flex flex-row items-center justify-start py-0 pl-0 pr-[82px] gap-[3px]">
+        <Image
+          className="h-10 w-10 relative rounded-md object-cover"
+          loading="lazy"
+          width={40}
+          height={40}
+          alt=""
+          src="/images/avatar.png"
+        />
+        <div className="overflow-hidden flex flex-col items-start justify-start gap-[3px]">
+          <a className="[text-decoration:none] font-jakarta relative font-bold text-[inherit] inline-block min-w-[66px]">
+            {studentName}
+          </a>
+          <a className="[text-decoration:none] font-jakarta relative font-medium text-gray-300">
+            {studentInitial}
           </a>
         </div>
-        <div className="flex flex-col items-start justify-start pt-[5.5px] px-0 pb-0">
-          <IoEllipsisHorizontal className="w-5 h-5 text-black" />
-        </div>
       </div>
-      <div className="flex flex-row items-start justify-start py-0 pl-0 pr-7 gap-[3px] text-left text-black">
-        <div className="h-10 w-10 relative rounded-md bg-gainsboro-400" />
-        <div className="flex flex-col items-start justify-start pt-[2.5px] px-0 pb-0">
-          <div className="flex flex-col items-start justify-start gap-[3px]">
-            <a className="[text-decoration:none] relative font-bold text-[inherit] inline-block min-w-[66px]">
-              {studentName}
-            </a>
-            <a className="[text-decoration:none] relative font-medium text-gray-300">
-              {studentInitial}
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="self-stretch overflow-hidden flex flex-row items-center justify-center gap-[5px] text-base text-gold-100">
+      <div className="self-stretch overflow-hidden flex flex-row items-center justify-center gap-[5px] text-center text-base text-gold-100">
         <div className="rounded-md bg-white overflow-hidden flex flex-row items-center justify-center">
-          <div className="overflow-hidden flex flex-row items-center justify-center p-[5px] gap-px">
+          <div className="overflow-hidden flex flex-row items-center justify-center py-[5px] px-[11px] gap-px">
             <Image
-              className="h-2.5 w-2.5 relative"
+              className="h-3 w-3 relative mr-1"
               loading="lazy"
-              width={10}
-              height={10}
+              width={12}
+              height={12}
               alt=""
-              src="/vector.svg"
+              src="/images/star.svg"
             />
-            <div className="relative font-semibold">0</div>
+            <a className="font-jakarta relative font-semibold text-base">0</a>
           </div>
-          <div className="bg-gold-100 flex flex-row items-center justify-center py-2 px-[9px]">
-            <FaPlus className="w-3 h-3 text-gray-100" />
+          <div className="bg-gold-100 flex flex-row items-center justify-center py-2 px-4">
+            <FaPlus className="h-3.5 w-3.5 relative text-white" />
           </div>
         </div>
         <div className="flex-1 rounded-md bg-white overflow-hidden flex flex-row items-center justify-between gap-0 [row-gap:20px] text-crimson">
-          <div className="overflow-hidden flex flex-row items-center justify-center py-[5px] px-1 gap-px">
+          <div className="overflow-hidden flex flex-row items-center justify-center py-[5px] px-[11px] gap-px">
             <Image
-              className="h-2.5 w-[11.1px] relative"
+              className="h-[10.8px] w-3 relative mr-1"
               loading="lazy"
-              width={11}
-              height={10}
+              width={12}
+              height={11}
               alt=""
-              src="/vector-2.svg"
+              src="/images/warning.svg"
             />
-            <a className="[text-decoration:none] relative font-semibold text-[inherit]">
-              0
-            </a>
+            <a className="font-jakarta relative font-semibold text-base">0</a>
           </div>
-          <div className="bg-crimson flex flex-row items-center justify-center py-2 px-[9px] z-[1]">
-            <FaPlus className="w-3 h-3 text-gray-100" />
+          <div className="bg-crimson flex flex-row items-center justify-center py-2 px-4">
+            <FaPlus className="h-3.5 w-3.5 relative text-white" />
           </div>
         </div>
       </div>
