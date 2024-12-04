@@ -1,9 +1,25 @@
+import Image from "next/image";
 import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-white">
-      <div className="text-lg font-bold text-blue-600">Schoolsuite</div>
+    <nav className="flex items-center justify-between px-6 py-4  ">
+      <div className="flex items-center space-x-4">
+        <Image
+          src="/images/LogoSchoolSuite.png"
+          alt="Logo"
+          width={0}
+          height={0}
+          className="w-[20px] h-auto"
+        />
+        <Image
+          src="/images/SchoolSuite.png"
+          alt="Logo"
+          width={0}
+          height={0}
+          className="w-[140px] h-auto"
+        />
+      </div>
       <div className="flex space-x-6">
         <a href="#" className="text-gray-600 hover:text-blue-600">
           How it works

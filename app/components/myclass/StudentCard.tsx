@@ -1,9 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { IoEllipsisHorizontal } from "react-icons/io5";
-import { FiPlus } from "react-icons/fi";
-import { StarIcon, WarningIcon } from "@/app/icons/SvgIcons";
 import Image from "next/image";
-import { HiPlus } from "react-icons/hi2";
 import { FaPlus } from "react-icons/fa";
 
 export default function StudentCard({
@@ -13,12 +10,34 @@ export default function StudentCard({
   initialStarCount = 0,
   initialAlertCount = 0,
 }) {
-  const [starCount, setStarCount] = useState(initialStarCount);
-  const [alertCount, setAlertCount] = useState(initialAlertCount);
+  const [attendanceStatus, setAttendanceStatus] = useState("Attendance");
+
+  // Function to get the color based on the attendance status
+  const getColor = () => {
+    switch (attendanceStatus) {
+      case "Present":
+        return "#85CA88"; // Green
+      case "Absent":
+        return "#EB5118"; // Red
+      case "Late":
+        return "#F5A12C"; // Orange
+      default:
+        return "#FFFFFF"; // Default (white)
+    }
+  };
+
+  // Function to get the text color based on the attendance status
+  const getTextColor = () => {
+    return attendanceStatus === "Attendance" ? "text-gray-400" : "text-white";
+  };
 
   return (
     <div
-      className={`w-[200px] rounded-md bg-whitesmoke-100 overflow-hidden flex flex-col items-start justify-start p-[5px] box-border gap-[5px] min-w-[140px] max-w-[200px] leading-[normal] tracking-[normal] text-left text-smi text-black font-jakarta `}
+      className={`w-[200px] rounded-xl overflow-hidden flex flex-col items-start justify-start p-[5px] box-border gap-[5px] min-w-[140px] max-w-[200px] leading-[normal] tracking-[normal] text-left text-smi text-black font-jakarta`}
+      style={{
+        backgroundColor: "whitesmoke", // Card background
+        border: `2px solid ${getColor()}`, // Dynamic border color
+      }}
     >
       <div className="self-stretch overflow-hidden flex flex-row items-center justify-end py-[2.6px] px-0">
         <IoEllipsisHorizontal className="h-5 w-5 " />
@@ -75,12 +94,43 @@ export default function StudentCard({
           </div>
         </div>
       </div>
-      <div className="self-stretch rounded-md bg-white overflow-hidden flex flex-row items-start justify-between py-[5px] pl-[5px] pr-1 gap-5 text-left text-sm text-gray-100">
-        <select className="w-full p-1 border border-white bg-white text-gray-400 h-7 rounded focus:outline-none focus:ring focus:ring-blue-300 text-sm">
-          <option>Attendance</option>
-          <option>Present</option>
-          <option>Absent</option>
-          <option>Excused</option>
+      <div className="self-stretch rounded-md  overflow-hidden flex flex-row items-start justify-between py-[5px] pl-[5px] pr-1 gap-5 text-left text-sm text-gray-100">
+        <select
+          className={`w-full p-1 border h-7 rounded text-sm ${getTextColor()}`} // Dynamic text color
+          value={attendanceStatus}
+          onChange={(e) => setAttendanceStatus(e.target.value)}
+          style={{
+            backgroundColor: getColor(), // Dynamic background color for the select element
+          }}
+        >
+          <option
+            value="Attendance"
+            className="text-gray-400 "
+            style={{ backgroundColor: "#FFFFFF" }}
+          >
+            Attendance
+          </option>
+          <option
+            value="Present"
+            className="text-white"
+            style={{ backgroundColor: "#85CA88" }}
+          >
+            Present
+          </option>
+          <option
+            value="Absent"
+            className="text-white"
+            style={{ backgroundColor: "#EB5118" }}
+          >
+            Absent
+          </option>
+          <option
+            value="Late"
+            className="text-white"
+            style={{ backgroundColor: "#F5A12C" }}
+          >
+            Late
+          </option>
         </select>
       </div>
     </div>
