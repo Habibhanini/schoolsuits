@@ -1,9 +1,10 @@
 import { IoSearch } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
+  AiIcon,
   NotifcationIcon,
   SafeGuardAlert,
   SafeGuardCheck,
@@ -12,6 +13,8 @@ import { BsArrowBarRight } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { logout } from "@/app/store/userSlice"; // Import your logout action
 import { useRouter } from "next/navigation";
+import TimeBar from "./TimeBar";
+import { CgChevronRight } from "react-icons/cg";
 interface NavbarProps {
   isOpen: boolean;
   toggleSidebar: () => void; // Function to toggle sidebar
@@ -19,11 +22,15 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ toggleSidebar, isOpen }) => {
   const dispatch = useDispatch();
-  const router = useRouter(); // For navigation after logout
-
+  const router = useRouter();
+  const totalTime = 1; // Total time in minutes
+  const [timeLeft, setTimeLeft] = useState(totalTime);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSafeguarding, setIsSafeguarding] = useState(false);
-
+  const [isRegisterDisabled, setIsRegisterDisabled] = useState(false);
+  const [isStartClassEnabled, setIsStartClassEnabled] = useState(false); // New state to control Start Class visibility
+  const [showFinishOptions, setShowFinishOptions] = useState(false);
+  const [isTimerBarVisible, setIsTimerBarVisible] = useState(false);
   const handleClick = () => {
     setIsSafeguarding(!isSafeguarding);
   };
@@ -33,24 +40,46 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar, isOpen }) => {
   };
 
   const handleLogout = () => {
-    dispatch(logout()); // Dispatch logout action to update state
-    router.push("/auth/signin"); // Redirect to the login page after logout
+    dispatch(logout());
+    router.push("/auth/signin");
+  };
+
+  const handleStartRegister = () => {
+    setIsRegisterDisabled(true); // Disable the Start Register button
+    setIsStartClassEnabled(true); // Enable the Start Class button
+  };
+
+  const handleStartClass = () => {
+    setIsStartClassEnabled(false); // Hide Start Class button
+    setShowFinishOptions(false); // Ensure finish options are hidden initially
+    setTimeLeft(totalTime); // Reset the timer
+    setIsTimerBarVisible(true); // Show the TimerBar
+
+    // Start the timer
+    const interval = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev > 1) {
+          return prev - 1;
+        } else {
+          clearInterval(interval); // Stop timer when it reaches 0
+          setShowFinishOptions(true); // Show Finish Options
+          return 0;
+        }
+      });
+    }, 60000); // Decrease time every 1 minute
+  };
+
+  const handleFinishNow = () => {
+    setIsRegisterDisabled(false); // Re-enable Start Register
+    setIsStartClassEnabled(false); // Reset Start Class button visibility
+    setShowFinishOptions(false); // Hide Finish Options
+    setIsTimerBarVisible(false);
+    setTimeLeft(totalTime); // Reset the timer
   };
 
   return (
-    <div className="navbar bg-white  px-6 flex items-center">
-      {/* Sidebar toggle button
-      <button
-        onClick={toggleSidebar}
-        className="p-2 mr-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-md"
-      >
-        {isOpen ? (
-          <BsArrowBarLeft className="h-[24px] w-[24px] transition-transform duration-200 transform " />
-        ) : (
-          <BsArrowBarRight className="h-[24px] w-[24px] transition-transform duration-200" />
-        )}
-      </button>
-    */}
+    <div className="navbar bg-white px-6 flex items-center">
+      {/* Sidebar toggle button */}
       <button
         onClick={toggleSidebar}
         className="p-2 mr-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 rounded-md"
@@ -64,7 +93,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar, isOpen }) => {
         </div>
       </button>
 
-      <div className="navbar-start flex-grow">
+      <div className=" navbar-start  space-x-4">
         <div className="relative">
           <input
             type="text"
@@ -75,8 +104,56 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar, isOpen }) => {
             <IoSearch className="h-5 w-5 text-gray-400" />
           </div>
         </div>
+        <button
+          onClick={handleStartRegister}
+          disabled={isRegisterDisabled}
+          className={`btn bg-white shadow-lg rounded-xl border-gray-200 font-jakarta ${
+            isRegisterDisabled
+              ? "cursor-not-allowed opacity-50"
+              : "hover:bg-gray-100 hover:text-[#F1B528] text-[#F1B528]"
+          }`}
+        >
+          Start Register <CgChevronRight className="ml-2 h-5 w-5" />
+        </button>
+
+        {/* Start Class Button */}
+        {isStartClassEnabled && (
+          <button
+            onClick={handleStartClass}
+            className="btn bg-white shadow-lg rounded-xl border-gray-200 hover:bg-gray-100 hover:text-[#F1B528] text-[#F1B528] font-jakarta"
+          >
+            Start Class <CgChevronRight className="ml-2 h-5 w-5" />
+          </button>
+        )}
+
+        {/* Timer Bar */}
+        {isTimerBarVisible && (
+          <div className="w-64">
+            <TimeBar
+              totalTime={totalTime}
+              timeLeft={timeLeft}
+              unitName="Unit 6.4"
+            />
+          </div>
+        )}
+
+        {/* Finish Options */}
+        {showFinishOptions && (
+          <>
+            <button className="btn bg-white shadow-lg rounded-xl border-gray-200 hover:bg-gray-100 text-black font-jakarta">
+              Give HMW <AiIcon className="ml-2 h-5 w-5" />
+            </button>
+            <button
+              onClick={handleFinishNow}
+              className="text-black font-jakarta text-sm w-24"
+            >
+              Or finish Now
+            </button>
+          </>
+        )}
       </div>
 
+      {/* Other Navbar Elements */}
       <div className="navbar-end flex items-center space-x-4">
         <NotifcationIcon />
         <button
@@ -133,7 +210,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar, isOpen }) => {
               </Link>
               <div onClick={handleLogout}>
                 <Link
-                  href="#" // Link to sign-in page
+                  href="#"
                   className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
                 >
                   Logout

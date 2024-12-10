@@ -29,7 +29,7 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
       icon: (isActive: boolean) => (
         <DashboardIcon
           className={`${isActive ? "fill-white" : "fill-gray-500"} ${
-            isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"
+            isOpen ? " m-2   " : "mr-2"
           }`}
         />
       ),
@@ -39,7 +39,7 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
       icon: (isActive: boolean) => (
         <ScheduleIcon
           className={`${isActive ? "fill-white" : "fill-gray-500"} ${
-            isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"
+            isOpen ? "m-2" : "mr-2"
           }`}
         />
       ),
@@ -50,7 +50,7 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
       icon: (isActive: boolean) => (
         <LessonsIcon
           className={`${isActive ? "fill-white" : "fill-gray-500"} ${
-            isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"
+            isOpen ? "m-2 mr-4" : "mr-2"
           }`}
         />
       ),
@@ -61,7 +61,7 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
       icon: (isActive: boolean) => (
         <StudentsIcon
           className={`${isActive ? "fill-white" : "fill-gray-500"} ${
-            isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"
+            isOpen ? "m-2" : "mr-2"
           }`}
         />
       ),
@@ -72,7 +72,7 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
       icon: (isActive: boolean) => (
         <StudentsIcon
           className={`${isActive ? "fill-white" : "fill-gray-500"} ${
-            isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"
+            isOpen ? "m-2" : "mr-2"
           }`}
         />
       ),
@@ -83,7 +83,7 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
       icon: (isActive: boolean) => (
         <ClassesIcon
           className={`${isActive ? "fill-white" : "fill-gray-500"} ${
-            isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"
+            isOpen ? "m-2" : "mr-2"
           }`}
         />
       ),
@@ -94,7 +94,7 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
       icon: (isActive: boolean) => (
         <MessagesIcon
           className={`${isActive ? "fill-white" : "fill-gray-500"} ${
-            isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"
+            isOpen ? "m-2" : "mr-2"
           }`}
         />
       ),
@@ -105,7 +105,7 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
       icon: (isActive: boolean) => (
         <DocumentsIcon
           className={`${isActive ? "fill-white" : "fill-gray-500"} ${
-            isOpen ? "mr-[-26px] ml-[-10px]" : "mr-2"
+            isOpen ? "m-2" : "mr-2"
           }`}
         />
       ),
@@ -149,7 +149,7 @@ const LeftSideBarLinks: React.FC<LeftSideBarLinksProps> = ({
             onClick={() => handleClick(link.name)}
             style={{ cursor: "pointer" }} // Add this line
           >
-            <span className={`mr-2 ${!isOpen && "mx-auto ml-[-8px]"}`}>
+            <span className={` ${!isOpen && "mx-auto m-2"}`}>
               {link.icon(activeLink === link.name)}
             </span>
             {isOpen && <span className="font-jakarta">{link.name}</span>}
