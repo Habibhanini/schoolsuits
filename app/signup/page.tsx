@@ -10,6 +10,7 @@ import { RootState } from "@/app/store/store";
 import Navbar from "../components/landing/Navbar";
 import Footer from "../components/landing/footer";
 import ProgressStepper from "../components/landing/ProgressStepper";
+import SchoolForm from "../components/Signup/SchoolForm";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -41,9 +42,15 @@ const SignUp = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
-      <main className="flex-grow flex justify-start items-start py-12 px-10">
-        <ProgressStepper />
-      </main>
+      <div className="flex-row flex  ">
+        <div className="justify-start items-start py-12 pl-10">
+          <ProgressStepper />
+        </div>
+        <div className="flex-1 flex items-center justify-center w-full px-11">
+          <SchoolForm />
+        </div>
+      </div>
+
       <Footer />
     </div>
   );
