@@ -37,12 +37,18 @@ const SignUp = () => {
         <div className="justify-start items-start py-12 pl-10">
           <ProgressStepper currentStep={currentStep} />
         </div>
-        <div className="flex-1 flex items-center justify-center w-full px-11">
-          {currentStep === 2 && <SchoolForm />}
-          {currentStep === 3 && <Classroom />}
-        </div>
+        {currentStep === 2 && (
+          <div className="flex-1 flex items-start justify-start w-full px-11 pt-7">
+            <SchoolForm />
+          </div>
+        )}
+        {currentStep === 3 && (
+          <div className="flex-1 flex items-start justify-start w-full px-11 pt-7">
+            <Classroom />
+          </div>
+        )}
       </div>
-      {currentStep < 4 && (
+      {currentStep > 1 && (
         <button
           onClick={handleBack}
           className="absolute bottom-14 left-[30%] w-48 py-3 bg-[#F1B528] text-black font-semibold rounded-xl hover:bg-yellow-500"
