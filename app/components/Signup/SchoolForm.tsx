@@ -134,9 +134,6 @@ const SchoolForm: React.FC = () => {
       </div>
 
       {/* Continue Button */}
-      <button className="absolute bottom-14 right-14 w-48 py-3 bg-[#F1B528] text-black font-semibold rounded-xl hover:bg-yellow-500">
-        Continue
-      </button>
     </div>
   );
 };

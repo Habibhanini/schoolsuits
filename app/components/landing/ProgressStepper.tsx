@@ -6,14 +6,34 @@ interface Step {
   current: boolean;
 }
 
-const steps: Step[] = [
-  { label: "Create an account", completed: true, current: false },
-  { label: "School overview", completed: false, current: true },
-  { label: "Classrooms overview", completed: false, current: false },
-  { label: "Staff overview", completed: false, current: false },
-];
+interface ProgressStepperProps {
+  currentStep: number;
+}
 
-const ProgressStepper: React.FC = () => {
+const ProgressStepper: React.FC<ProgressStepperProps> = ({ currentStep }) => {
+  const steps: Step[] = [
+    {
+      label: "Create an account",
+      completed: currentStep > 1,
+      current: currentStep === 1,
+    },
+    {
+      label: "School overview",
+      completed: currentStep > 2,
+      current: currentStep === 2,
+    },
+    {
+      label: "Classrooms overview",
+      completed: currentStep > 3,
+      current: currentStep === 3,
+    },
+    {
+      label: "Staff overview",
+      completed: currentStep > 4,
+      current: currentStep === 4,
+    },
+  ];
+
   return (
     <div className="bg-[#fff2e9] rounded-2xl p-6 w-[400px] h-[700px] flex flex-col items-center">
       <ul className="relative space-y-8 mt-4">
