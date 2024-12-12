@@ -26,6 +26,9 @@ const SignUp = () => {
   const handleContinue = () => {
     setCurrentStep((prevStep) => prevStep + 1);
   };
+  const handleBack = () => {
+    setCurrentStep((prevStep) => prevStep - 1);
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -39,6 +42,14 @@ const SignUp = () => {
           {currentStep === 3 && <Classroom />}
         </div>
       </div>
+      {currentStep < 4 && (
+        <button
+          onClick={handleBack}
+          className="absolute bottom-14 left-[30%] w-48 py-3 bg-[#F1B528] text-black font-semibold rounded-xl hover:bg-yellow-500"
+        >
+          Back
+        </button>
+      )}
       {currentStep < 4 && (
         <button
           onClick={handleContinue}
