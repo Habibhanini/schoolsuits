@@ -35,7 +35,7 @@ const ProgressStepper: React.FC<ProgressStepperProps> = ({ currentStep }) => {
   ];
 
   return (
-    <div className="bg-[#fff2e9] rounded-2xl p-6 w-[400px] h-[700px] flex flex-col items-center">
+    <div className="bg-[#fff2e9] rounded-[35px] p-6 w-[400px] h-[700px] flex flex-col items-center">
       <ul className="relative space-y-8 mt-4">
         {steps.map((step, index) => (
           <li key={index} className="relative flex items-center">

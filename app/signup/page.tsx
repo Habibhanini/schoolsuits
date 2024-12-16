@@ -8,6 +8,7 @@ import Footer from "../components/landing/footer";
 import ProgressStepper from "../components/landing/ProgressStepper";
 import SchoolForm from "../components/Signup/SchoolForm";
 import Classroom from "../components/Signup/Classroom";
+import Staff from "../components/Signup/Staff";
 
 const SignUp = () => {
   const router = useRouter();
@@ -45,6 +46,11 @@ const SignUp = () => {
         {currentStep === 3 && (
           <div className="flex-1 flex items-start justify-start w-full px-11 pt-7">
             <Classroom />
+          </div>
+        )}
+        {currentStep === 4 && (
+          <div className="flex-1 flex items-start justify-start w-full px-11 pt-7">
+            <Staff />
           </div>
         )}
       </div>
