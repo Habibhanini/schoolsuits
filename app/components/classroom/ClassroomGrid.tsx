@@ -25,7 +25,7 @@ const ClassroomGrid: React.FC<ClassroomGridProps> = ({ classroomId }) => {
     selectedSeats.some(([r, c]) => r === row && c === col);
 
   return (
-    <div className=" w-full  bg-white p-8 rounded-xl">
+    <div className=" w-full  bg-white p-8 rounded-3xl">
       {/* Header */}
       <div
         className={`max-w-full  flex flex-row items-start justify-between flex-wrap content-start py-0 pl-0 pr-[3px] box-border leading-[normal] tracking-[normal] gap-5 text-left text-lg text-black font-playfair-display `}
