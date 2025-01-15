@@ -14,6 +14,13 @@ const Classroom = () => {
     setSelectedClassroom(classroomId);
   };
 
+  const handleAddClassroom = () => {
+    setSelectedClassroom("new"); // Use "new" or null to indicate an empty grid for new classrooms
+  };
+  const handleBackClick = () => {
+    setSelectedClassroom(null); // Set to null to show the ClassroomTable again
+  };
+
   return (
     <div className="flex flex-col gap-4 overflow-auto">
       <div className="flex flex-row gap-4">
@@ -21,15 +28,21 @@ const Classroom = () => {
           {/* ClassroomTable always visible */}
           <div className="col-span-5 row-span-5">
             {!selectedClassroom && (
-              <ClassroomTable onClassroomSelect={handleClassroomSelect} />
+              <ClassroomTable
+                onClassroomSelect={handleClassroomSelect}
+                onAddClassroom={handleAddClassroom} // Pass the handler for adding classrooms
+              />
             )}
             {selectedClassroom && (
-              <ClassroomGrid classroomId={selectedClassroom} />
+              <ClassroomGrid
+                classId={selectedClassroom} // Pass the selected class ID
+                onBackClick={handleBackClick}
+              />
             )}
           </div>
 
           {/* Conditionally render other components if a classroom is selected */}
-          {selectedClassroom && (
+          {selectedClassroom && selectedClassroom == "new" && (
             <div className="row-span-5 col-start-6 col-span-5">
               <DetailClassroom classroomId={selectedClassroom} />
               <StaffClassroom classroomId={selectedClassroom} />
