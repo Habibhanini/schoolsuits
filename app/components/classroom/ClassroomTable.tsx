@@ -11,26 +11,20 @@ interface Classroom {
 const ClassroomTable = ({
   onClassroomSelect,
   onAddClassroom,
+  onClassSelect,
 }: {
   onClassroomSelect: (id: string) => void;
-  onAddClassroom: () => void; // New prop for adding classrooms
+  onAddClassroom: () => void;
+  onClassSelect: (id: string) => void; // New handler for class selection
 }) => {
   const [classrooms, setClassrooms] = useState<Classroom[]>([]);
 
-  // Load data from JSON
   useEffect(() => {
-    fetch("/database/data.json") // Path to the JSON file in the public directory
+    fetch("/database/data.json")
       .then((response) => response.json())
-      .then((data) => {
-        setClassrooms(data.classrooms); // Store the fetched classrooms data
-      })
+      .then((data) => setClassrooms(data.classrooms))
       .catch((error) => console.error("Error loading data:", error));
   }, []);
-
-  const handleClassClick = (classId: string) => {
-    onClassroomSelect(classId); // Pass the selected class ID to the parent
-    // onAddClassroom();
-  };
 
   return (
     <div className="p-6 max-w-6xl mx-auto">
@@ -38,7 +32,7 @@ const ClassroomTable = ({
         <h1 className="text-lg font-bold">Classrooms</h1>
         <button
           className="bg-yellow-400 text-white px-4 py-2 rounded-lg hover:bg-yellow-500"
-          onClick={onAddClassroom} // Call the handler for adding classrooms
+          onClick={onAddClassroom}
         >
           Add a Classroom
         </button>
@@ -65,7 +59,7 @@ const ClassroomTable = ({
                 </td>
                 <td
                   className="p-4 text-blue-600 font-bold cursor-pointer"
-                  onClick={() => handleClassClick(classroom.id)}
+                  onClick={() => onClassroomSelect(classroom.id)}
                 >
                   {classroom.id}
                 </td>
@@ -75,8 +69,8 @@ const ClassroomTable = ({
                   {classroom.classes.map((classId) => (
                     <span
                       key={classId}
-                      onClick={() => handleClassClick(classId)}
-                      className="bg-blue-200 text-blue-600 px-2 py-1 rounded-full text-sm font-medium mr-2 cursor-pointer"
+                      onClick={() => onClassSelect(classId)} // Class click
+                      className="bg-blue-200 text-blue-600 px-2 py-1 rounded-full text-sm font-medium cursor-pointer"
                     >
                       {classId}
                     </span>

@@ -5,6 +5,7 @@ interface ClassroomGridProps {
 }
 
 const DetailClassroom: React.FC<ClassroomGridProps> = ({ classroomId }) => {
+  console.log(classroomId);
   return (
     <div className="p-4 bg-white rounded-3xl shadow mb-4">
       {/* Header Section */}
