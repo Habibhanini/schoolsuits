@@ -13,22 +13,23 @@ const Classroom = () => {
 
   const handleClassroomSelect = (classroomId: string) => {
     setSelectedClassroom(classroomId);
-    setSelectedClass(null);
+    setSelectedClass(null); // Reset the selected class
   };
 
   const handleClassSelect = (classId: string) => {
-    setSelectedClass(classId);
+    setSelectedClass(classId); // Set the selected class
   };
 
   const handleAddClassroom = () => {
-    setSelectedClassroom("new");
+    setSelectedClassroom("new"); // Indicate a new classroom creation
+    setSelectedClass(null);
   };
 
   const handleBackClick = () => {
     if (selectedClass) {
-      setSelectedClass(null);
+      setSelectedClass(null); // Reset selected class and go back to classroom view
     } else {
-      setSelectedClassroom(null);
+      setSelectedClassroom(null); // Reset selected classroom and go back to table view
     }
   };
 
@@ -36,7 +37,7 @@ const Classroom = () => {
     <div className="flex flex-col gap-4 h-screen overflow-hidden">
       <div className="flex flex-row gap-4 w-full h-full">
         <div className="grid grid-cols-5 grid-rows-5 gap-4 w-full h-full">
-          {/* ClassroomTable */}
+          {/* ClassroomTable: Shows all classrooms if no selection */}
           {!selectedClassroom && !selectedClass && (
             <div className="col-span-5 row-span-5 overflow-auto">
               <ClassroomTable
@@ -47,7 +48,7 @@ const Classroom = () => {
             </div>
           )}
 
-          {/* All components when a class is selected */}
+          {/* When a class is selected, display ClassesClassroom and other components */}
           {selectedClass && (
             <>
               <div className="col-span-5 row-span-2 ">
@@ -59,29 +60,37 @@ const Classroom = () => {
               <div className="row-span-5 col-start-6 col-span-5 overflow-auto">
                 <DetailClassroom classroomId={selectedClassroom!} />
                 <StaffClassroom classroomId={selectedClassroom!} />
-                <ClassesClassroom classroomId={selectedClassroom!} />
+                <ClassesClassroom
+                  classroomId={selectedClassroom!}
+                  selectedClass={selectedClass}
+                />
               </div>
             </>
           )}
 
-          {/* ClassroomGrid for selected classroom */}
-          {selectedClassroom && !selectedClass && (
-            <div className="col-span-5 row-span-5 overflow-hidden">
-              <ClassroomGrid
-                classId={selectedClassroom}
-                onBackClick={handleBackClick}
-              />
-            </div>
-          )}
+          {/* ClassroomGrid: Shows seating chart for a selected classroom */}
+          {selectedClassroom &&
+            !selectedClass &&
+            selectedClassroom == "new" && (
+              <>
+                <div className="col-span-5 row-span-5 ">
+                  <ClassroomGrid
+                    classId={selectedClassroom}
+                    onBackClick={handleBackClick}
+                  />
+                </div>
+                <div className="row-span-5 col-start-6 col-span-5 overflow-hidden">
+                  <DetailClassroom classroomId={selectedClassroom} />
+                  <StaffClassroom classroomId={selectedClassroom} />
+                  <ClassesClassroom
+                    classroomId={selectedClassroom}
+                    selectedClass={null}
+                  />
+                </div>
+              </>
+            )}
 
-          {/* Add Classroom */}
-          {selectedClassroom === "new" && (
-            <div className="row-span-5 col-start-6 col-span-5 overflow-auto">
-              <DetailClassroom classroomId={selectedClassroom} />
-              <StaffClassroom classroomId={selectedClassroom} />
-              <ClassesClassroom classroomId={selectedClassroom} />
-            </div>
-          )}
+          {/* New Classroom: Shows components for adding a new classroom */}
         </div>
       </div>
     </div>
