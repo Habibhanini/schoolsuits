@@ -51,13 +51,13 @@ const Classroom = () => {
           {/* When a class is selected, display ClassesClassroom and other components */}
           {selectedClass && (
             <>
-              <div className="col-span-5 row-span-2 ">
+              <div className="col-span-4 row-span-3">
                 <ClassroomGrid
                   classId={selectedClass}
                   onBackClick={handleBackClick}
                 />
               </div>
-              <div className="row-span-5 col-start-6 col-span-5 overflow-auto">
+              <div className="col-span-1 row-span-5 overflow-auto">
                 <DetailClassroom classroomId={selectedClassroom!} />
                 <StaffClassroom classroomId={selectedClassroom!} />
                 <ClassesClassroom
@@ -73,13 +73,13 @@ const Classroom = () => {
             !selectedClass &&
             selectedClassroom == "new" && (
               <>
-                <div className="col-span-5 row-span-5 ">
+                <div className="col-span-4 row-span-5">
                   <ClassroomGrid
                     classId={selectedClassroom}
                     onBackClick={handleBackClick}
                   />
                 </div>
-                <div className="row-span-5 col-start-6 col-span-5 overflow-hidden">
+                <div className="col-span-1 row-span-5 overflow-hidden">
                   <DetailClassroom classroomId={selectedClassroom} />
                   <StaffClassroom classroomId={selectedClassroom} />
                   <ClassesClassroom
@@ -89,8 +89,6 @@ const Classroom = () => {
                 </div>
               </>
             )}
-
-          {/* New Classroom: Shows components for adding a new classroom */}
         </div>
       </div>
     </div>

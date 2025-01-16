@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 interface Student {
   id: string;
@@ -18,7 +19,7 @@ const ClassesClassroom: React.FC<ClassesClassroomProps> = ({
   const [classes, setClasses] = useState<string[]>([]);
   const [students, setStudents] = useState<Student[]>([]);
   const [currentPage, setCurrentPage] = useState(1); // Pagination: Current page
-  const studentsPerPage = 5; // Pagination: Students per page
+  const studentsPerPage = 6; // Pagination: Students per page
 
   // Fetch classes for a classroom when `classroomId` changes
   useEffect(() => {
@@ -77,34 +78,27 @@ const ClassesClassroom: React.FC<ClassesClassroomProps> = ({
         <h2 className="text-lg font-bold">
           {selectedClass ? `Class: ${selectedClass}` : "Classes"}
         </h2>
+        <button className="bg-[#c9e990] px-4 py-2 rounded-lg hover:bg-green-500 text-[#699e32] font-bold text-sm">
+          Add <span className="font-bold text-sm">+</span>
+        </button>
       </div>
       {selectedClass && totalPages > 1 && (
-        <div className="flex justify-center items-center gap-4 mb-4">
-          <button
+        <div className="flex justify-between items-center gap-4 mb-2">
+          <FaChevronLeft
             onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-            className={`px-3 py-1 text-sm rounded ${
-              currentPage === 1
-                ? "bg-gray-300 text-gray-500"
-                : "bg-blue-500 text-white"
+            className={`cursor-pointer ${
+              currentPage === 1 ? "text-gray-500" : "text-gray-950"
             }`}
-          >
-            Prev
-          </button>
-          <span className="text-sm">
-            Page {currentPage} of {totalPages}
+          />
+          <span className="text-sm font-semibold">
+            {currentPage} of {totalPages}
           </span>
-          <button
+          <FaChevronRight
             onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
-            className={`px-3 py-1 text-sm rounded ${
-              currentPage === totalPages
-                ? "bg-gray-300 text-gray-500"
-                : "bg-blue-500 text-white"
+            className={`cursor-pointer ${
+              currentPage === totalPages ? "text-gray-500" : "text-gray-950"
             }`}
-          >
-            Next
-          </button>
+          />
         </div>
       )}
       {/* Classes or Students Section */}
@@ -116,16 +110,16 @@ const ClassesClassroom: React.FC<ClassesClassroomProps> = ({
               {currentStudents.map((student) => (
                 <div
                   key={student.id}
-                  className="flex items-center gap-4 p-2 border rounded-lg bg-gray-50 hover:bg-gray-100"
+                  className="flex items-center gap-4 border-b-2  rounded-lg "
                 >
                   <img
                     src={student.picture}
                     alt={student.name}
-                    className="w-10 h-10 rounded-full"
+                    className="w-11 h-11 rounded"
                   />
                   <div>
-                    <p className="font-bold text-sm">{student.name}</p>
-                    <p className="text-xs text-gray-500">{student.id}</p>
+                    <p className="font-bold text-base">{student.name}</p>
+                    <p className="text-sm text-gray-500">{student.id}</p>
                   </div>
                 </div>
               ))}
