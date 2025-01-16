@@ -7,11 +7,13 @@ interface ClassroomGridProps {
 const DetailClassroom: React.FC<ClassroomGridProps> = ({ classroomId }) => {
   console.log(classroomId);
   return (
-    <div className="p-4 bg-white rounded-3xl shadow mb-4">
+    <div className="p-4 bg-white rounded-3xl  mb-4">
       {/* Header Section */}
       <div className="flex justify-between items-center mb-2">
-        <h2 className="text-lg font-bold">Detail</h2>
-        <button className="text-gray-500">Back</button>
+        <h2 className="text-lg font-extrabold font-playfair">Detail</h2>
+        <button className="text-darkgray font-jakarta text-sm font-bold mr-4 text-black">
+          Back
+        </button>
       </div>
 
       {/* Input Section */}

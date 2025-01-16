@@ -6,8 +6,8 @@ interface ClassroomGridProps {
 }
 const StaffClassroom: React.FC<ClassroomGridProps> = ({ classroomId }) => {
   return (
-    <div className="p-4 bg-white rounded-3xl shadow mb-4">
-      <h2 className="text-lg font-bold mb-2">Staff</h2>
+    <div className="p-4 bg-white rounded-3xl mb-4">
+      <h2 className="text-lg font-extrabold mb-2 font-playfair">Staff</h2>
 
       {/* Principal Section */}
       <div className="mb-4 flex items-center justify-between">
