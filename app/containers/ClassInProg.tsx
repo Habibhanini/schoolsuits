@@ -9,7 +9,7 @@ const ClassInProg = () => {
         <div className="grid grid-cols-5 grid-rows-5 gap-4 w-full">
           <div className="col-span-5 row-span-5 ">
             {" "}
-            <MyClass />
+            <MyClass classroomId="A1" classId="10Fr" />
           </div>
           <div className="row-span-5 col-start-6 col-span-5">
             {" "}
