@@ -2,6 +2,7 @@ import Calendar from "./Calendar";
 import ClassInProg from "./ClassInProg";
 import Classroom from "./Classroom";
 import Dashboard from "./Dashoard";
+import Lessons from "./Lessons";
 import Student from "./Student";
 import Users from "./Users";
 
@@ -32,7 +33,7 @@ const ContentContainer: React.FC<ContentContainerProps> = ({
         );
 
       case "Lessons":
-        return <div>Lessons In Progress</div>;
+        return <Lessons />;
 
       case "Students":
         return <Student />;

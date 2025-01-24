@@ -97,12 +97,12 @@ const MyClass: NextPage<ClassType> = ({
         {seating.map((seat, index) => (
           <div
             key={index}
-            className="relative  "
+            className="relative mb-3  "
             style={{
-              gridColumnStart: seat.seat[1] - 2, // Adjust column start
+              gridColumnStart: seat.seat[1] - 3, // Adjust column start
               gridRowStart: seat.seat[0] + 1, // Adjust row start
               width: "170px", // Ensures uniform size
-              height: "130px", // Ensures space between rows
+              height: "135px", // Ensures space between rows
 
               alignItems: "center",
             }}
