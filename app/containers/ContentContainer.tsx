@@ -3,6 +3,7 @@ import ClassInProg from "./ClassInProg";
 import Classroom from "./Classroom";
 import Dashboard from "./Dashoard";
 import Lessons from "./Lessons";
+import Reports from "./Reports";
 import Student from "./Student";
 import Users from "./Users";
 
@@ -45,6 +46,8 @@ const ContentContainer: React.FC<ContentContainerProps> = ({
             <Classroom />
           </div>
         );
+      case "Reports":
+        return <Reports />;
 
       case "Users":
         return <Users />;
