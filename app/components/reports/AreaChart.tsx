@@ -1,10 +1,9 @@
-// components/GrowthChart.tsx
 import React from "react";
 import dynamic from "next/dynamic";
 
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-const GrowthChart: React.FC = () => {
+const AreaChart: React.FC = () => {
   const series = [
     {
       name: "U12",
@@ -33,12 +32,11 @@ const GrowthChart: React.FC = () => {
         enabled: false,
       },
     },
-
     stroke: {
       curve: "smooth",
-      width: 5, // thicker line
+      width: 5,
     },
-    colors: ["#2A6ADB", "#34D399"], // line colors
+    colors: ["#2A6ADB", "#34D399"],
     fill: {
       type: "gradient",
       gradient: {
@@ -52,29 +50,26 @@ const GrowthChart: React.FC = () => {
       },
     },
     markers: {
-      size: 4, // small dots
+      size: 4,
       strokeWidth: 2,
       strokeColors: "#fff",
       hover: {
         size: 6,
       },
     },
-    // Enable shared tooltips so we can show data for both series at once
     tooltip: {
       shared: true,
       intersect: false,
       custom: ({ series, dataPointIndex, w }) => {
-        const avatarUrl = "/images/avatar.png"; // path to your avatar
+        const avatarUrl = "/images/avatar.png";
         const category = w.globals.categoryLabels[dataPointIndex];
 
-        // Grab the U12 and U20 values for this hovered category index
         const u12Val = series[0][dataPointIndex] ?? 0;
         const u20Val = series[1][dataPointIndex] ?? 0;
 
         return `
           <div class="rounded-md border border-gray-200 bg-white p-2 shadow-md">
             <div class="flex flex-col items-center space-y-2">
-              <!-- ONE avatar for the entire tooltip -->
               <div class="w-16 h-16 rounded-full bg-white shadow flex items-center justify-center">
                 <img
                   src="${avatarUrl}"
@@ -82,9 +77,7 @@ const GrowthChart: React.FC = () => {
                   class="w-12 h-12 rounded-full border-2 border-white shadow-md"
                 />
               </div>
-              <!-- Display the category (e.g., Q2 2024) -->
               <div class="text-xs text-gray-500">${category}</div>
-              <!-- Show both results below -->
               <div class="text-sm font-medium text-gray-700">U12: ${u12Val}</div>
               <div class="text-sm font-medium text-gray-700">U20: ${u20Val}</div>
             </div>
@@ -109,6 +102,27 @@ const GrowthChart: React.FC = () => {
     },
     dataLabels: {
       enabled: false,
+    },
+    // Legend configuration: position at the top with bold labels
+    legend: {
+      show: true,
+      position: "top",
+      horizontalAlign: "center",
+      fontSize: "14px",
+      fontWeight: 500,
+      labels: {
+        colors: "#374151",
+      },
+      markers: {
+        size: 8,
+        shape: "line",
+        strokeWidth: 4,
+        fillColors: undefined,
+        customHTML: undefined,
+        onClick: undefined,
+        offsetX: 0,
+        offsetY: 0,
+      },
     },
   };
 
@@ -136,4 +150,4 @@ const GrowthChart: React.FC = () => {
   );
 };
 
-export default GrowthChart;
+export default AreaChart;
