@@ -48,12 +48,11 @@ const BottleneckChart: React.FC = () => {
     // We want each shape to be a smooth funnel
     stroke: {
       curve: "smooth",
-      // Give no stroke to the first two layers, a thicker outline to the top layer:
       width: [0, 0, 4],
     },
     // Use the same color for all three series,
     // but different opacities (defined below in fill.opacity)
-    colors: ["#3B82F6", "#3B82F6"],
+    colors: ["#256DF0", "#256DF0"],
 
     // We'll use "solid" fill for all three, but with an array of opacities
     fill: {
@@ -97,7 +96,7 @@ const BottleneckChart: React.FC = () => {
 
   // components/BottleneckChart.tsx
   return (
-    <div className="w-full max-w-3xl rounded-lg bg-white p-4 shadow">
+    <div className="w-full max-w-2xl rounded-lg bg-white p-4 shadow">
       <div className="mb-2 flex items-center justify-between">
         <h2 className="text-base font-semibold text-gray-800">
           Success rating
