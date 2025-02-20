@@ -2,7 +2,7 @@ import React from "react";
 
 const Comments: React.FC = () => {
   return (
-    <div className="  h-[800px]  rounded-md bg-white p-4 shadow-sm">
+    <div className=" w-full  h-[800px]  rounded-md bg-white p-4 shadow-sm">
       {/* Header */}
       <div className="mb-3 flex items-center justify-between">
         <h2 className="text-sm font-semibold text-gray-800">Comments</h2>

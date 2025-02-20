@@ -73,7 +73,7 @@ const PieChart: React.FC = () => {
   };
 
   return (
-    <div className="w-full  max-w-2xl rounded-lg bg-white p-4 shadow">
+    <div className="w-full  rounded-lg bg-white p-4 shadow">
       {/* Header row */}
       <div className="mb-3 flex items-center justify-between">
         <h2 className="text-base font-semibold text-gray-800">

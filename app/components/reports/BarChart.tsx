@@ -75,7 +75,7 @@ const BarChart: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl rounded-lg bg-white p-4 shadow">
+    <div className="w-full rounded-lg bg-white p-4 shadow">
       <h2 className="mb-2 text-base font-semibold text-gray-800">
         Total Students by Quarter (2024)
       </h2>

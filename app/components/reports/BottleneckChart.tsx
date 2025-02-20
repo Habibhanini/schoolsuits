@@ -96,7 +96,7 @@ const BottleneckChart: React.FC = () => {
 
   // components/BottleneckChart.tsx
   return (
-    <div className="w-full max-w-2xl rounded-lg bg-white p-4 shadow">
+    <div className="w-full  rounded-lg bg-white p-4 shadow">
       <div className="mb-2 flex items-center justify-between">
         <h2 className="text-base font-semibold text-gray-800">
           Success rating
