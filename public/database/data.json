@@ -1,0 +1,196 @@
+{
+  "classrooms": [
+    {
+      "id": "A1",
+      "name": "Classroom A1",
+      "principalTeacher": "Philip Wey",
+      "sharedWith": "Coralie Johnson",
+      "classes": ["10Fr", "8Ger", "7Math"],
+      "seating": [
+        { "studentId": "student-1", "seat": [0, 4] },
+        { "studentId": "student-2", "seat": [0, 5] },
+        { "studentId": "student-3", "seat": [0, 7] },
+        { "studentId": "student-4", "seat": [0, 8] },
+        { "studentId": "student-5", "seat": [0, 10] },
+        { "studentId": "student-6", "seat": [0, 11] },
+        { "studentId": "student-7", "seat": [1, 4] },
+        { "studentId": "student-8", "seat": [1, 5] },
+        { "studentId": "student-9", "seat": [1, 7] },
+        { "studentId": "student-10", "seat": [1, 8] },
+        { "studentId": "student-11", "seat": [1, 10] },
+        { "studentId": "student-12", "seat": [1, 11] },
+        { "studentId": "student-13", "seat": [3, 4] },
+        { "studentId": "student-14", "seat": [3, 5] },
+        { "studentId": "student-15", "seat": [3, 7] },
+        { "studentId": "student-16", "seat": [3, 8] },
+        { "studentId": "student-17", "seat": [3, 10] },
+        { "studentId": "student-18", "seat": [3, 11] },
+        { "studentId": "student-19", "seat": [4, 4] },
+        { "studentId": "student-20", "seat": [4, 5] },
+        { "studentId": "student-21", "seat": [4, 7] },
+        { "studentId": "student-22", "seat": [4, 8] },
+        { "studentId": "student-23", "seat": [4, 10] },
+        { "studentId": "student-24", "seat": [4, 11] },
+        { "studentId": "student-25", "seat": [6, 7] },
+        { "studentId": "student-26", "seat": [6, 8] },
+        { "studentId": "student-27", "seat": [6, 10] },
+        { "studentId": "student-28", "seat": [6, 11] }
+      ]
+    },
+    {
+      "id": "H1",
+      "name": "Classroom H1",
+      "principalTeacher": "Beatrice Von Den Berg",
+      "sharedWith": null,
+      "classes": ["12Chem", "11Bio"]
+    }
+  ],
+  "classes": [
+    {
+      "id": "10Fr",
+      "name": "10Fr",
+      "students": [
+        {
+          "id": "student-1",
+          "name": "Alice",
+          "picture": "https://randomuser.me/api/portraits/women/1.jpg"
+        },
+        {
+          "id": "student-2",
+          "name": "Bob",
+          "picture": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        {
+          "id": "student-3",
+          "name": "Charlie",
+          "picture": "https://randomuser.me/api/portraits/men/2.jpg"
+        },
+        {
+          "id": "student-4",
+          "name": "Diana",
+          "picture": "https://randomuser.me/api/portraits/women/2.jpg"
+        },
+        {
+          "id": "student-5",
+          "name": "Eve",
+          "picture": "https://randomuser.me/api/portraits/women/3.jpg"
+        },
+        {
+          "id": "student-6",
+          "name": "Frank",
+          "picture": "https://randomuser.me/api/portraits/men/3.jpg"
+        },
+        {
+          "id": "student-7",
+          "name": "Grace",
+          "picture": "https://randomuser.me/api/portraits/women/4.jpg"
+        },
+        {
+          "id": "student-8",
+          "name": "Henry",
+          "picture": "https://randomuser.me/api/portraits/men/4.jpg"
+        },
+        {
+          "id": "student-9",
+          "name": "Ivy",
+          "picture": "https://randomuser.me/api/portraits/women/5.jpg"
+        },
+        {
+          "id": "student-10",
+          "name": "Jack",
+          "picture": "https://randomuser.me/api/portraits/men/5.jpg"
+        },
+        {
+          "id": "student-11",
+          "name": "Kate",
+          "picture": "https://randomuser.me/api/portraits/women/6.jpg"
+        },
+        {
+          "id": "student-12",
+          "name": "Liam",
+          "picture": "https://randomuser.me/api/portraits/men/6.jpg"
+        },
+        {
+          "id": "student-13",
+          "name": "Mia",
+          "picture": "https://randomuser.me/api/portraits/women/7.jpg"
+        },
+        {
+          "id": "student-14",
+          "name": "Noah",
+          "picture": "https://randomuser.me/api/portraits/men/7.jpg"
+        },
+        {
+          "id": "student-15",
+          "name": "Olivia",
+          "picture": "https://randomuser.me/api/portraits/women/8.jpg"
+        },
+        {
+          "id": "student-16",
+          "name": "Paul",
+          "picture": "https://randomuser.me/api/portraits/men/8.jpg"
+        },
+        {
+          "id": "student-17",
+          "name": "Alice",
+          "picture": "https://randomuser.me/api/portraits/women/1.jpg"
+        },
+        {
+          "id": "student-18",
+          "name": "Bob",
+          "picture": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        {
+          "id": "student-19",
+          "name": "Charlie",
+          "picture": "https://randomuser.me/api/portraits/men/2.jpg"
+        },
+        {
+          "id": "student-20",
+          "name": "Diana",
+          "picture": "https://randomuser.me/api/portraits/women/2.jpg"
+        },
+        {
+          "id": "student-21",
+          "name": "Eve",
+          "picture": "https://randomuser.me/api/portraits/women/3.jpg"
+        },
+        {
+          "id": "student-22",
+          "name": "Frank",
+          "picture": "https://randomuser.me/api/portraits/men/3.jpg"
+        },
+        {
+          "id": "student-23",
+          "name": "Grace",
+          "picture": "https://randomuser.me/api/portraits/women/4.jpg"
+        },
+        {
+          "id": "student-24",
+          "name": "Henry",
+          "picture": "https://randomuser.me/api/portraits/men/4.jpg"
+        },
+        {
+          "id": "student-25",
+          "name": "Ivy",
+          "picture": "https://randomuser.me/api/portraits/women/5.jpg"
+        },
+        {
+          "id": "student-26",
+          "name": "Jack",
+          "picture": "https://randomuser.me/api/portraits/men/5.jpg"
+        },
+        {
+          "id": "student-27",
+          "name": "Kate",
+          "picture": "https://randomuser.me/api/portraits/women/6.jpg"
+        },
+        {
+          "id": "student-28",
+          "name": "Liam",
+          "picture": "https://randomuser.me/api/portraits/men/6.jpg"
+        }
+      ]
+    }
+  ]
+}

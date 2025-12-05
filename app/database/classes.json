@@ -1,0 +1,46 @@
+{
+  "classrooms": [
+    {
+      "id": "A1",
+      "name": "Classroom A1",
+      "principalTeacher": "Philip Wey",
+      "sharedWith": "Coralie Johnson",
+      "assignedClasses": ["10Fr"]
+    },
+    {
+      "id": "H1",
+      "name": "Classroom H1",
+      "principalTeacher": "Beatrice Von Den Berg",
+      "sharedWith": null,
+      "assignedClasses": ["10Fr"]
+    }
+  ],
+  "classes": [
+    {
+      "id": "10Fr",
+      "name": "10Fr",
+      "students": [
+        {
+          "id": "student-1",
+          "name": "Alice",
+          "picture": "https://randomuser.me/api/portraits/women/1.jpg"
+        },
+        {
+          "id": "student-2",
+          "name": "Bob",
+          "picture": "https://randomuser.me/api/portraits/men/1.jpg"
+        },
+        {
+          "id": "student-3",
+          "name": "Charlie",
+          "picture": "https://randomuser.me/api/portraits/men/2.jpg"
+        },
+        {
+          "id": "student-4",
+          "name": "Diana",
+          "picture": "https://randomuser.me/api/portraits/women/2.jpg"
+        }
+      ]
+    }
+  ]
+}

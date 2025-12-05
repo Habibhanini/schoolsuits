@@ -1,9 +1,9 @@
 import AdditionalInfo from "@/app/components/student/AdditionalInfo";
 import DietaryNeeds from "@/app/components/student/DietaryNeeds";
 import StudentContacts from "@/app/components/student/StudentContacts";
-import { useEffect, useState } from "react";
+
 const StudentRight = () => {
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  /* const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,31 +20,17 @@ const StudentRight = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, []);*/
   return (
-    <div
-      className={`grid gap-3 ${
-        isLargeScreen
-          ? "grid-cols-1 md:gap-4"
-          : "grid-cols-6 grid-rows-[430px_auto]"
-      }`}
-    >
-      <div
-        className={`${
-          isLargeScreen ? "row-span-2" : "col-span-2 col-start-1 "
-        }`}
-      >
+    <div className="flex flex-col gap-4">
+      <div>
         <StudentContacts />
       </div>
-      <div
-        className={`${isLargeScreen ? "row-span-2" : "col-span-2 col-start-3"}`}
-      >
-        <AdditionalInfo />
-      </div>
-      <div
-        className={`${isLargeScreen ? "row-span-2" : "col-span-2 col-start-5"}`}
-      >
+      <div>
         <DietaryNeeds />
+      </div>
+      <div>
+        <AdditionalInfo />
       </div>
     </div>
   );

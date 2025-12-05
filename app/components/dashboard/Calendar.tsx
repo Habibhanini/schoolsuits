@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import dayjs from "dayjs";
-import isoWeek from "dayjs/plugin/isoWeek"; // Import dayjs ISO week plugin
+import isoWeek from "dayjs/plugin/isoWeek";
 import Events from "./Events";
 
-dayjs.extend(isoWeek); // Enable ISO week plugin to handle week-based logic
+dayjs.extend(isoWeek);
 
 const eventsList = [
   {
@@ -32,24 +32,18 @@ const eventsList = [
 ];
 
 const Calendar = () => {
-  // State to track the current week and selected date
   const [currentDate, setCurrentDate] = useState(dayjs());
-  const [selectedDate, setSelectedDate] = useState(dayjs()); // Initialize selected date with the current date
+  const [selectedDate, setSelectedDate] = useState(dayjs());
 
-  // Get the start and end dates for the current week
   const getWeekDays = () => {
-    const startOfWeek = currentDate.startOf("isoWeek"); // Start of current week (Monday)
+    const startOfWeek = currentDate.startOf("isoWeek");
     const days = [];
-
-    // Push each day of the current week (Mon-Sun)
     for (let i = 0; i < 7; i++) {
       days.push(startOfWeek.add(i, "day"));
     }
-
     return days;
   };
 
-  // Functions to handle week navigation
   const handlePrevWeek = () => {
     setCurrentDate(currentDate.subtract(1, "week"));
   };
@@ -58,12 +52,10 @@ const Calendar = () => {
     setCurrentDate(currentDate.add(1, "week"));
   };
 
-  // Today's date for comparison
   const today = dayjs();
 
-  // Handle day click to select the clicked day
   const handleDayClick = (day: dayjs.Dayjs) => {
-    setSelectedDate(day); // Set the selected date
+    setSelectedDate(day);
   };
 
   const filteredEvents = eventsList.filter((event) =>
@@ -71,10 +63,10 @@ const Calendar = () => {
   );
 
   return (
-    <div className="bg-white p-6 rounded-3xl  w-[460px] h-[820px]">
+    <div className="bg-white p-6 rounded-3xl w-[20vw] min-w-[300px] max-w-[380px] h-[calc(100vh-8rem)] min-h-[700px]">
       {/* Month and Year Header with Arrows */}
       <div className="flex justify-between mb-4">
-        <h2 className="text-xl font-extrabold font-playfair">
+        <h2 className="text-lg font-extrabold font-playfair">
           {currentDate.format("MMMM YYYY")}
         </h2>
         <div className="flex space-x-1">
@@ -98,25 +90,25 @@ const Calendar = () => {
         {getWeekDays().map((day, index) => (
           <div
             key={index}
-            onClick={() => handleDayClick(day)} // Handle click for both day and label
-            className={`cursor-pointer text-center p-1 rounded-lg 
+            onClick={() => handleDayClick(day)}
+            className={`cursor-pointer text-center rounded-lg 
               ${
                 day.isSame(today, "day")
-                  ? "border-2 border-continue-yellow" // Border around the current date (today)
+                  ? "border-2 border-continue-yellow"
                   : ""
               } 
               ${
                 selectedDate.isSame(day, "day")
-                  ? "bg-continue-yellow text-white" // Fully colored for the selected day
+                  ? "bg-continue-yellow text-white"
                   : "text-gray-900"
               }
               ${index >= 5 ? "text-gray-500" : ""}
               hover:bg-yellow-400 hover:text-white`}
           >
-            <div className="text-sm font-jakarta mb-2">
+            <div className="text-[13px] font-jakarta mb-2">
               {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][index]}
             </div>
-            <div className="h-6 w-6 flex items-center justify-center rounded-full font-bold ml-1">
+            <div className="h-6 w-6 flex items-center justify-center text-[13px] rounded-full font-bold ml-1">
               {day.date()}
             </div>
           </div>

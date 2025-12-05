@@ -48,11 +48,17 @@ const config: Config = {
           "100": "#99a5b7",
           "200": "#9b9b9b",
           "300": "#969696",
+          "400": "#8E8C8A",
         },
         gainsboro: {
           "100": "#e7e7e7",
-          "200": "#dcdcdc",
-          "300": "#d9d9d9",
+          "200": "#e2e2e2",
+          "300": "#dcdcdc",
+          "400": "#d9d9d9",
+        },
+        limegreen: {
+          "100": "#06c719",
+          "200": "rgba(6, 199, 25, 0.1)",
         },
         aliceblue: {
           "100": "#ecf1ff",
@@ -60,31 +66,60 @@ const config: Config = {
           "300": "#e3e8ef",
         },
         royalblue: "#3971ff",
+
+        forestgreen: "#337b07",
+        gold: {
+          "100": "#ecd041",
+          "200": "#f3bf06",
+          "300": "rgba(243, 191, 6, 0.1)",
+        },
+
+        chocolate: "#ec7b2b",
+        dimgray: "#575757",
+        indianred: "#e26b6b",
+        khaki: "#c9e990",
+        olivedrab: "#699c0b",
+        crimson: "#ec4141",
+        darkviolet: {
+          "100": "#c018e2",
+          "200": "rgba(192, 24, 226, 0.1)",
+        },
+        red: {
+          "100": "#d70303",
+          "200": "rgba(215, 3, 3, 0.1)",
+        },
       },
+
       fontSize: {
-        smi: "13px",
+        "3xs": "10px",
         "2xs": "11px",
         xs: "12px",
+        smi: "13px",
         sm: "14px",
-        lg: "18px",
         mini: "15px",
         base: "16px",
-        "3xs": "10px",
+        lg: "18px",
         inherit: "inherit",
       },
-      limegreen: "#06c719",
-      forestgreen: "#337b07",
-      gold: {
-        "100": "#ecd041",
-        "200": "#f3bf06",
+    },
+    screens: {
+      "2k": "2400px",
+      "1k": "2000px",
+      fhd: "1800px",
+      hd: "1400px",
+      "1366x720": { raw: "screen and (width: 1366px) and (height: 720px)" },
+      mq1425: {
+        raw: "screen and (max-width: 1425px)",
       },
-      chocolate: "#ec7b2b",
-      dimgray: "#575757",
-      indianred: "#e26b6b",
-      deepskyblue: "#28a4f1",
-      teal: "#287f71",
-      khaki: "#c9e990",
-      olivedrab: "#699c0b",
+      lg: {
+        max: "1200px",
+      },
+      mq825: {
+        raw: "screen and (max-width: 825px)",
+      },
+      mq450: {
+        raw: "screen and (max-width: 450px)",
+      },
     },
   },
   borderRadius: {
@@ -94,17 +129,7 @@ const config: Config = {
     "7xl-5": "26.5px",
     "81xl": "100px",
   },
-  screens: {
-    mq1050: {
-      raw: "screen and (max-width: 1050px)",
-    },
-    mq750: {
-      raw: "screen and (max-width: 750px)",
-    },
-    mq450: {
-      raw: "screen and (max-width: 450px)",
-    },
-  },
+
   plugins: [require("daisyui")],
   daisyui: {
     themes: ["light"], // Set to 'light' theme

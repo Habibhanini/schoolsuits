@@ -22,7 +22,7 @@ const ActualClass: NextPage<ActualClassType> = ({ className = "" }) => {
         <b className="relative inline-block text-deepskyblue min-w-[69px]">
           Class 10FR
         </b>
-        <div className="self-stretch rounded-3xs bg-whitesmoke flex flex-col items-start justify-start text-white rounded-xl">
+        <div className="self-stretch rounded-3xs bg-whitesmoke-100 flex flex-col items-start justify-start text-white rounded-xl">
           <div className="w-[150px] rounded-3xs bg-continue-yellow flex flex-col items-start justify-center py-[7.5px] pl-2.5 pr-5 box-border rounded-xl">
             <b className="relative">30 min left</b>
           </div>
@@ -42,7 +42,7 @@ const ActualClass: NextPage<ActualClassType> = ({ className = "" }) => {
             </div>
           </div>
           <a className="[text-decoration:none] relative text-sm font-bold font-jakarta text-[inherit] inline-block min-w-[116px]">{`new seating plan `}</a>
-          <div className="w-[250px] flex-1 relative rounded-3xs bg-whitesmoke overflow-hidden rounded-xl" />
+          <div className="w-[250px] flex-1 relative rounded-3xs bg-whitesmoke-100 overflow-hidden rounded-xl" />
         </div>
       </section>
     </div>

@@ -47,33 +47,36 @@ const Todo = () => {
   const completedCount = tasks.filter((task) => task.completed).length;
 
   return (
-    <div className="bg-school-blue text-white p-6 rounded-3xl  w-full max-w-lg h-[400px]">
+    <div className="bg-school-blue text-white p-4 rounded-[20px] w-[55%] h-[45vh] min-h-[350px]">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold font-playfair">To-Do</h2>
+        <h2 className="text-lg font-bold font-playfair">To-Do</h2>
 
         <div className="flex items-center space-x-4">
-          <p className="text-white font-bold font-jakarta">
-            Completed {completedCount}/{tasks.length}
+          <p className="text-white font-bold text-sm font-jakarta">
+            {completedCount}/{tasks.length} Completed
           </p>
 
           <button
             onClick={addTask}
-            className="bg-white text-black rounded-md py-1 px-4 text-sm font-bold hover:bg-gray-200 font-jakarta"
+            className="bg-white text-black rounded-xl py-2 px-2 text-sm font-bold hover:bg-gray-200 font-jakarta w-24 h-10"
           >
             Add a Task
           </button>
         </div>
       </div>
 
-      {/* Tasks List with fixed height and scrollable */}
-      <div className="space-y-4 max-h-[300px] overflow-y-auto scrollable pr-1">
+      {/* Tasks List with responsive height */}
+      <div
+        className="space-y-4 overflow-y-auto scrollable pr-1"
+        style={{ height: "calc(100% - 80px)" }}
+      >
         {tasks.map((task) => (
           <div
             key={task.id}
-            className="bg-[#3047BA] border-b-[1px] text-white  flex items-start justify-between font-jakarta"
+            className="bg-[#3047BA] border-b-[1px] text-white flex items-start justify-between font-jakarta p-3 rounded-lg"
           >
             <div>
-              <h3 className="font-bold mb-4">{task.title}</h3>
+              <h3 className="font-bold mb-3 text-mini">{task.title}</h3>
               <p className="text-sm text-gray-300 font-jakarta">
                 Deadline: {task.deadline} - {task.professor}
               </p>
