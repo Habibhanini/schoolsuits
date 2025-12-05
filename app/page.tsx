@@ -16,23 +16,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="h-screen flex">
-        {/* Left Sidebar */}
-        <LeftSidebar isOpen={isSidebarOpen} handleLinkClick={handleLinkClick} />
-
-        {/* Main Section */}
-        <div
-          className={`flex-1 flex flex-col ${
-            isSidebarOpen ? "ml-64" : "ml-20"
-          }`}
-        >
-          {/* Pass toggleSidebar to Navbar */}
-          <Navbar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-          {/* Main content area */}
-
-          <ContentContainer activeContent={activeContent} />
-        </div>
-      </div>
+      <div className="h-screen flex"></div>
     </main>
   );
 }

@@ -47,7 +47,7 @@ const Todo = () => {
   const completedCount = tasks.filter((task) => task.completed).length;
 
   return (
-    <div className="bg-school-blue text-white p-4 rounded-[20px]  w-[820px] fhd:h-[360px] 1k:h-[450px] 1k:w-[980px] ">
+    <div className="bg-school-blue text-white p-4 rounded-[20px] w-[55%] h-[45vh] min-h-[350px]">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-bold font-playfair">To-Do</h2>
 
@@ -65,12 +65,15 @@ const Todo = () => {
         </div>
       </div>
 
-      {/* Tasks List with fixed height and scrollable */}
-      <div className="space-y-4 max-h-[300px] overflow-y-auto scrollable pr-1">
+      {/* Tasks List with responsive height */}
+      <div
+        className="space-y-4 overflow-y-auto scrollable pr-1"
+        style={{ height: "calc(100% - 80px)" }}
+      >
         {tasks.map((task) => (
           <div
             key={task.id}
-            className="bg-[#3047BA] border-b-[1px] text-white  flex items-start justify-between font-jakarta"
+            className="bg-[#3047BA] border-b-[1px] text-white flex items-start justify-between font-jakarta p-3 rounded-lg"
           >
             <div>
               <h3 className="font-bold mb-3 text-mini">{task.title}</h3>

@@ -1,7 +1,7 @@
 import React from "react";
 import { IoEllipsisHorizontal } from "react-icons/io5";
+
 const Messages: React.FC = () => {
-  // Message data
   const messagesData = [
     {
       id: 1,
@@ -25,22 +25,25 @@ const Messages: React.FC = () => {
       title: "Classes next year behaviour flags",
       body: "I have done the classlists for L2 for 8s and 9s next year here, thank you for all the colours that you added, this was very helpful.",
       summary:
-        "The email details the class placements for L2 French and Spanish for next year 8 and 9, considering student language choices, behaviour, and family ties to Spain.",
+        "The email details the class placements for L2 French and Spanish for next year 8 and 9, considering student language colours, behaviour, and family ties to Spain.",
     },
   ];
 
   return (
-    <div className="bg-white p-6 rounded-3xl  fhd:w-full fhd:h-full 2k:w-full 1k:h-full overflow-hidden border-gray-200">
+    <div className="bg-white p-6 rounded-3xl w-full h-[60vh] min-h-[500px] overflow-hidden border-gray-200">
       {/* Title */}
       <div className="flex justify-between items-center mb-2">
-        <h2 className="text-lg  font-extrabold font-playfair">Last Messages</h2>
+        <h2 className="text-lg font-extrabold font-playfair">Last Messages</h2>
         <button>
           <IoEllipsisHorizontal className="w-6 h-6" />
         </button>
       </div>
 
       {/* Scrollable Messages List */}
-      <div className="space-y-3 overflow-y-auto scrollable fhd:h-[360px] 1k:h-[430px] 2k:h-[800px] p-2">
+      <div
+        className="space-y-3 overflow-y-auto scrollable p-2"
+        style={{ height: "calc(100% - 80px)" }}
+      >
         {messagesData.map((message) => (
           <div
             key={message.id}
@@ -78,7 +81,7 @@ const Messages: React.FC = () => {
 
                   <div className="flex items-center">
                     <p className="text-smi text-orange-600 font-semibold font-jakarta mr-2">
-                      Assistant’s summary
+                      Assistant's summary
                     </p>
                     <div className="flex-grow h-[1px] rounded-sm bg-safeguard-orange"></div>
                   </div>

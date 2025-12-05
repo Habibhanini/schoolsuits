@@ -4,14 +4,11 @@ import Image from "next/image";
 
 interface LeftSidebarProps {
   isOpen: boolean;
-  handleLinkClick: (content: string) => void;
+  // Remove handleLinkClick since we're using Next.js routing now
 }
 
 // LeftSidebar component
-const LeftSidebar: React.FC<LeftSidebarProps> = ({
-  isOpen,
-  handleLinkClick,
-}) => {
+const LeftSidebar: React.FC<LeftSidebarProps> = ({ isOpen }) => {
   return (
     <div
       className={`fixed inset-y-0 left-0 bg-white p-4 transition-all duration-200 z-50 ${
@@ -20,7 +17,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({
     >
       {/* Links and icons */}
       <div className="mt-12">
-        <LeftSideBarLinks isOpen={isOpen} onLinkClick={handleLinkClick} />
+        <LeftSideBarLinks isOpen={isOpen} />
       </div>
 
       {/* Bottom images */}
